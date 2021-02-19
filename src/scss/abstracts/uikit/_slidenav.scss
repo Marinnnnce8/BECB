@@ -1,0 +1,32 @@
+@mixin hook-slidenav {
+    background-color: $white;
+    width: 90px;
+    height: 90px;
+    transition: $transition;
+
+    svg {
+        color: $global-color;
+    }
+
+    @include hover {
+        background-color: $global-color;
+
+        svg {
+            color: $white;
+        }
+    }
+}
+
+@mixin hook-slidenav-previous {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin hook-slidenav-next {
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+}

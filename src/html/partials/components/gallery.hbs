@@ -1,8 +1,12 @@
 <div class="gallery">
+
+	{{#> ukContainer size="small"}}
+		{{#*inline "out"}}
+    		{{#if title}}<h2 class="uk-margin-medium-bottom">{{title}}</h2>{{/if}}
+        {{/inline}}
+	{{/ukContainer}}
 	{{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
 		{{#*inline "out"}}
-
-		{{#if title}}<h3>{{title}}</h3>{{/if}}
 
 		<div class="gallery-wrap" data-uk-lightbox="animation: fade" data-uk-scrollspy="cls: uk-animation-fade; delay: 128; target: > .gallery-row > .gallery-image">
 		{{#each items}}
@@ -19,7 +23,7 @@
 			{{/with}}
 		{{/each}}
 		</div>
-		{{#if caption}}<div class="gallery-caption uk-text-center uk-margin-small-top">{{caption}}</div>{{/if}}
+		{{#if caption}}<div class="gallery-caption uk-text-center uk-margin-small-top">{{caption}}<span>{{author}}</span></div>{{/if}}
 
 		{{/inline}}
 	{{/ukContainer}}

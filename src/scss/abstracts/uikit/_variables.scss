@@ -1,3 +1,5 @@
+@import '../../base/fonts';
+
 //
 // Breakpoints
 //
@@ -21,15 +23,15 @@ $global-font-family: $font-default;
 $global-font-size: $font-size;
 $global-line-height: $line-height;
 $global-2xlarge-font-size: 2.625rem;
-$global-xlarge-font-size: 2rem;
+$global-xlarge-font-size: 44px;
 $global-large-font-size: 1.5rem;
-$global-medium-font-size: 1.25rem;
-$global-small-font-size: 0.875rem;
+$global-medium-font-size: 20px;
+$global-small-font-size: 16px;
 
 // Colors
-$global-color: $black;
+$global-color: $primary;
 $global-emphasis-color: $black;
-$global-muted-color: $grey;
+$global-muted-color: $blue-dark;
 $global-link-color: $primary;
 $global-link-hover-color: $primary;
 $global-inverse-color: $white;
@@ -73,6 +75,15 @@ $base-strong-font-weight: $bold;
 $base-code-color: inherit;
 $base-em-color: inherit;
 $base-selection-background: $secondary;
+$base-heading-font-family: $font-exo;
+$base-heading-color: $global-color;
+$base-h2-line-height: 1.1;
+$base-h3-font-size: 34px;
+$base-h3-line-height: 1;
+$base-h4-font-size: 34px;
+$base-h4-line-height: 1;
+$base-h4-font-size: 26px;
+$base-h4-line-height: 1;
 
 
 //
@@ -127,10 +138,11 @@ $grid-large-gutter-horizontal-l: $global-large-gutter;
 //
 // Breadcrumb
 //
-$breadcrumb-item-color: $global-muted-color;
-$breadcrumb-divider: '/';
-$breadcrumb-divider-margin-horizontal: $global-margin;
+$breadcrumb-item-color: $global-color;
+$breadcrumb-divider: '-';
+$breadcrumb-divider-margin-horizontal: $global-small-margin;
 $breadcrumb-divider-color: $global-color;
+$breadcrumb-item-font-size: $global-font-size;
 
 
 //
@@ -151,7 +163,28 @@ $animation-fast-duration: $speed-fast;
 //
 // Text
 //
-$text-lead-font-size: $global-large-font-size;
-$text-lead-line-height: $global-line-height;
-$text-lead-color: $global-emphasis-color;
+$text-lead-font-size: 20px;
+$text-lead-line-height: 1.5;
+$text-lead-color: $global-color;
 $text-meta-color: $global-muted-color;
+
+//
+// Button
+//
+$button-line-height: 22px;
+$button-small-line-height: 19px;
+$button-large-line-height: 24px;
+$button-font-size: 18px;
+$button-large-font-size: 20px;
+$button-primary-background: $success;
+$button-primary-color: $global-color;
+$button-secondary-background: transparent;
+$button-secondary-color: $global-color;
+$button-default-color: $global-color;
+$button-primary-hover-background: transparent;
+$button-primary-focus-background: transparent;
+$button-default-hover-color: $white;
+$button-default-active-color: $white;
+$button-text-color: $azure;
+$button-text-hover-color: $azure;
+$button-text-line-height: 1.5;

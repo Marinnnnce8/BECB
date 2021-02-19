@@ -1,0 +1,19 @@
+@mixin hook-base-heading {
+    font-weight: $bold;
+}
+
+@mixin hook-base-h2 {
+    letter-spacing: -.02em;
+}
+
+@mixin hook-base-h3 {
+    letter-spacing: -.02em;
+}
+
+@mixin hook-base-h4 {
+    letter-spacing: -.02em;
+}
+
+@mixin hook-base-h5 {
+    letter-spacing: -.02em;
+}
