@@ -141,25 +141,56 @@
 
 	<p class="uk-text-small">*This is some small text</p>
 
+    <h2 class="uk-margin-medium-bottom">FAQ</h2>
+
+    <ul data-uk-accordion>
+        <li class="uk-open">
+            <a class="uk-accordion-title" href="#">Item 1</a>
+            <div class="uk-accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </li>
+        <li>
+            <a class="uk-accordion-title" href="#">Item 2</a>
+            <div class="uk-accordion-content">
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+            </div>
+        </li>
+        <li>
+            <a class="uk-accordion-title" href="#">Item 3</a>
+            <div class="uk-accordion-content">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+            </div>
+        </li>
+    </ul>
+
 	<h2>Messages</h2>
 
-	<p class="uk-alert uk-alert-primary uk-border-rounded uk-box-shadow-medium uk-margin-medium-bottom">Primary Text. This text is a message to the website user</p>
+	<p class="uk-alert uk-alert-primary uk-border-rounded uk-box-shadow-large uk-margin-medium-bottom">Primary Text. This text is a message to the website user</p>
 
-	<p class="uk-alert uk-alert-success uk-border-rounded uk-box-shadow-medium uk-margin-medium-bottom">Success Text. This text is providing a positive message to the user</p>
+	<p class="uk-alert uk-alert-success uk-border-rounded uk-box-shadow-large uk-margin-medium-bottom">Success Text. This text is providing a positive message to the user</p>
 
-	<p class="uk-alert uk-alert-warning uk-border-rounded uk-box-shadow-medium uk-margin-medium-bottom">Warning Text. The text is providing a gentle warning to the user</p>
+	<p class="uk-alert uk-alert-warning uk-border-rounded uk-box-shadow-large uk-margin-medium-bottom">Warning Text. The text is providing a gentle warning to the user</p>
 
-	<p class="uk-alert uk-alert-danger uk-border-rounded uk-box-shadow-medium uk-margin-medium-bottom">Danger Text. The text is providing an error alert to the user</p>
+	<p class="uk-alert uk-alert-danger uk-border-rounded uk-box-shadow-large uk-margin-medium-bottom">Danger Text. The text is providing an error alert to the user</p>
 
-	<h3>Embedded Videos</h3>
+	<h2>Embedded Videos</h2>
 
-	<div class="responsive yt">
-		<iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?modestbranding=1&rel=0&feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-
-	<div class="responsive vm">
-		<iframe src="https://player.vimeo.com/video/63655754?dnt=1&app_id=122963" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="Placeholder visual blip"></iframe>
-	</div>
+    {{#> ukLightbox class="uk-box-shadow-xlarge embeded-video uk-position-relative" backgroundImage="video-img.jpg" autoplay=true}}
+        {{#*inline "out"}}
+            <img src="./img/becb-shape.svg" class="uk-preserve" data-uk-svg alt="shape">
+            <a class="uk-position-cover"
+                href="{{page.lightbox.href}}" data-caption="{{page.lightbox.caption}}" aria-label="{{page.lightbox.label}}">
+                <span class="uk-border-circle uk-display-block uk-background-primary">
+                    {{>renderIcon name="play" viewBox="24 24"}}
+                </span>
+            </a>
+            <div class="uk-position-bottom uk-text-center">
+                <span class="uk-text-uppercase uk-text-bold">Watch how it works</span>
+                <h2>BECB Embeded Video</h2>
+            </div>
+        {{/inline}}
+    {{/ukLightbox}}
 
 	{{/inline}}
 {{/content}}
@@ -167,9 +198,9 @@
 {{#> content}}
 	{{#*inline "body"}}
 
-	<h3>Buttons</h3>
+	<h2>Buttons</h2>
 
-	{{#> ukGrid class="uk-grid-medium uk-child-width-1-3@s"}}
+	{{#> ukGrid class="uk-grid-small uk-child-width-1-3@s"}}
 		{{#*inline "cells"}}
 
 		<div>
@@ -202,51 +233,28 @@
 		{{/inline}}
 	{{/ukGrid}}
 
-	<h3>Other Button Styles</h3>
-
-	{{#> ukGrid class="uk-grid-medium uk-child-width-1-3@s"}}
-		{{#*inline "cells"}}
-
-		<div>
-			<div class="uk-text-meta uk-form-label">Danger</div>
-			{{> ukButton label=cta style="danger"}}
-		</div>
-
-		<div>
-			<div class="uk-text-meta uk-form-label">Text Normal</div>
-			{{> ukButton label=cta style="text"}}
-		</div>
-
-		<div>
-			<div class="uk-text-meta uk-form-label">Text Large</div>
-			{{> ukButton label=cta style="text" class="uk-text-large"}}
-		</div>
-
-		{{/inline}}
-	{{/ukGrid}}
-
 	{{/inline}}
 {{/content}}
 
 {{#> nbForm}}
 	{{#*inline "form"}}
 
-	<form id="nb-form-{{page.name}}" class="uk-form-stacked uk-width-2-3@s uk-width-3-5@m InputfieldForm" method="post" data-uk-nb-form novalidate data-colspacing="1">
+    <h2>Form Styles</h2>
 
-		<h3>Form Styles</h3>
+	<form id="nb-form-{{page.name}}" class="uk-form-stacked InputfieldForm" method="post" data-uk-nb-form novalidate data-colspacing="1">
 
 		{{#> ukGrid class="uk-grid-small"}}
 			{{#*inline "cells"}}
 
-			{{> nbInput label="Your Name" name="name" title="Please enter your name"}}
+			{{> nbInput class="uk-width-5-6@m" label="Your name" name="name" title="Please enter your name"}}
 
-			{{> nbInput label="Email Address" name="email" type="email" title="Please enter a valid email address"}}
+			{{> nbInput class="uk-width-5-6@m" label="Email address" name="email" type="email" title="Please enter a valid email address"}}
 
-			{{> nbInput label="Telephone" name="tel" type="tel"}}
+			{{> nbInput class="uk-width-3-5@m" label="Telephone" name="tel" type="tel"}}
 
 			{{> nbInput label="Your Enquiry" name="enquiry" type="textarea" title="Please enter your enquiry"}}
 
-			{{> nbInput name="submit" type="submit" value="Send"}}
+			{{> nbInput name="submit" type="submit" value="Send a message"}}
 
 			{{/inline}}
 		{{/ukGrid}}
@@ -255,6 +263,23 @@
 
 	{{/inline}}
 {{/nbForm}}
+
+<div class="uk-position-relative">
+    <img class="uk-position-top-center" src="./img/members-outter-shape.svg" data-img-svg alt="shape">
+    {{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
+        {{#*inline "out"}}
+            {{> social}}
+        {{/inline}}
+	{{/ukContainer}}
+
+    {{> members items=items.members title="Other Members in this Sector" size="xlarge"}}
+
+    {{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
+        {{#*inline "out"}}
+            {{> newsletter}}
+        {{/inline}}
+	{{/ukContainer}}
+</div>
 
 {{/inline}}
 

@@ -1,7 +1,7 @@
 {
 	"nb": {
 		"siteName": "Template Site",
-		"clientName": "NB Communication Ltd"
+		"clientName": " Blue Economy Cluster Builder"
 	},
 	"ukContainer": "small",
 	"cta": "Find out more",
@@ -28,19 +28,26 @@
 	],
 	"social": [
 		{
-			"name": "facebook",
+			"icon": "facebook",
 			"url": "https://www.facebook.com/"
 		},
 		{
-			"name": "twitter",
+			"icon": "twitter",
 			"url": "https://twitter.com/"
+		},
+		{
+			"icon": "instagram",
+			"url": "https://instagram.com/"
+		},
+		{
+			"icon": "email",
+			"url": "https://email.com/"
 		}
 	],
 	"legal": [
-		"Terms & Conditions",
-		"Privacy Policy",
-		"Disclaimer",
-		"Cookies"
+		"Terms of use",
+		"Privacy notice",
+		"Disclaimer"
 	],
 	"items": {
 		"children": {
@@ -175,6 +182,50 @@
 				"width": "1200",
 				"height": "675"
 			}
-		]
+		],
+        "members": [
+            {
+                "href": "#",
+                "label": "Find out more about this member",
+                "width": "277",
+                "height": "277",
+                "img": "member-bg-1.png",
+                "alt": "image",
+                "widthSec": "155",
+                "heightSec": "104",
+                "imgSec": "member-1.png",
+                "altSec": "image",
+                "sectorName": "Sector name",
+                "title": "British Petroleum"
+            },
+            {
+                "href": "#",
+                "label": "Find out more about this member",
+                "width": "277",
+                "height": "277",
+                "img": "member-bg-2.png",
+                "alt": "image",
+                "widthSec": "150",
+                "heightSec": "93",
+                "imgSec": "member-2.png",
+                "altSec": "image",
+                "sectorName": "Sector name",
+                "title": "AWS Ocean Energy"
+            },
+            {
+                "href": "#",
+                "label": "Find out more about this member",
+                "width": "277",
+                "height": "277",
+                "img": "member-bg-3.png",
+                "alt": "image",
+                "widthSec": "158",
+                "heightSec": "83",
+                "imgSec": "member-3.png",
+                "altSec": "image",
+                "sectorName": "Sector name",
+                "title": "SSE Renewables"
+            }
+        ]
 	}
 }

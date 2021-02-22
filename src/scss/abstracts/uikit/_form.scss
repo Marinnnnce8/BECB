@@ -1,6 +1,50 @@
+@mixin hook-form {
+    border-radius: 40px;
+    border: 2px solid $global-color;
+}
+
+@mixin hook-form-focus {
+    border: 2px solid $azure;
+}
+
 @mixin hook-form-misc {
-	.uk-textarea {
-		min-height: $global-large-gutter;
-		min-width: 100%;
-	}
+    .uk-textarea {
+        min-height: $global-large-gutter;
+        min-width: 100%;
+    }
+
+    button[type='submit'] {
+        background-color: $global-color;
+        z-index: 0;
+        color: $white;
+
+        &::after {
+            background-color: $success;
+        }
+
+        svg {
+            color: $success;
+        }
+
+        @include hover {
+            color: $global-color;
+
+            &::after {
+                opacity: 1;
+            }
+
+            svg {
+                color: $global-color;
+            }
+        }
+    }
+}
+
+@mixin hook-form-single-line {
+    height: 60px;
+}
+
+@mixin hook-form-label {
+    font-weight: $bold;
+    margin-bottom: 0;
 }

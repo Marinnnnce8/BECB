@@ -98,6 +98,8 @@ $form-focus-border: $primary;
 $form-radio-border: $global-color;
 $form-label-color: $global-color;
 $form-label-font-size: $global-small-font-size;
+$form-padding-horizontal: $global-medium-gutter;
+$form-placeholder-color: $primary-opacity;
 
 
 //
@@ -105,9 +107,9 @@ $form-label-font-size: $global-small-font-size;
 //
 $container-max-width: 1200px;
 $container-xsmall-max-width: 750px;
-$container-small-max-width: 900px;
+$container-small-max-width: 787px;
 $container-large-max-width: 1400px;
-$container-xlarge-max-width: 1600px;
+$container-xlarge-max-width: 1483px;
 $container-padding-horizontal: 15px;
 $container-padding-horizontal-s: $global-gutter;
 $container-padding-horizontal-m: $global-medium-gutter;
@@ -119,7 +121,7 @@ $container-padding-horizontal-m: $global-medium-gutter;
 $alert-primary-background: $global-primary-background;
 $alert-primary-color: $white;
 $alert-success-background: $global-success-background;
-$alert-success-color: $white;
+$alert-success-color: $global-color;
 $alert-warning-background: $global-warning-background;
 $alert-warning-color: $white;
 $alert-danger-background: $global-danger-background;
@@ -180,6 +182,7 @@ $button-primary-background: $success;
 $button-primary-color: $global-color;
 $button-secondary-background: transparent;
 $button-secondary-color: $global-color;
+$button-secondary-hover-color: $global-color;
 $button-default-color: $global-color;
 $button-primary-hover-background: transparent;
 $button-primary-focus-background: transparent;
@@ -188,3 +191,20 @@ $button-default-active-color: $white;
 $button-text-color: $azure;
 $button-text-hover-color: $azure;
 $button-text-line-height: 1.5;
+
+//
+// Table
+//
+$table-header-cell-color: $white;
+$table-cell-padding-horizontal: 20px;
+$table-cell-padding-vertical: 14px;
+
+//
+// Accordion
+//
+$accordion-item-margin-top: 10px;
+$accordion-content-margin-top: 30px;
+
+//
+// Card
+//

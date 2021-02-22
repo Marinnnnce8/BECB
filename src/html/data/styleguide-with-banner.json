@@ -13,5 +13,10 @@
 			"url": "#"
 		}
 	],
+    "lightbox": {
+        "href": "https://www.youtube.com/watch?v=ScMzIvxBSi4&ab_channel=BenMarquezTX",
+        "caption": "BECB Embeded Video",
+        "label": "Click to play the video"
+    },
 	"intro": "This is some lead text to introduce the styleguide. It should gently catch the user's eye, initiating the reading of the main page content."
 }

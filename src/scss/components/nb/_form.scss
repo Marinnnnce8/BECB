@@ -1,66 +1,78 @@
 .nb-form {
 
-	+ .nb-form {
-		margin-top: $global-gutter;
-	}
+    *+.uk-grid-margin,
+    .uk-grid+.uk-grid,
+    .uk-grid>.uk-grid-margin {
+        margin-top: 25px;
+    }
 
-	&-content {
-		position: relative;
+    form {
+        border-radius: 20px;
+        background-color: $blue-light;
+        padding: 36px 85px 50px 53px;
+    }
 
-		ul {
-			margin: 0 0 $global-small-margin;
-			padding: 0;
+    +.nb-form {
+        margin-top: $global-gutter;
+    }
 
-			li {
-				display: inline-block;
-				list-style: none;
-				width: 100%;
-			}
-		}
+    &-content {
+        position: relative;
 
-		.InputfieldRadiosFloated {
+        ul {
+            margin: 0 0 $global-small-margin;
+            padding: 0;
 
-			li {
-				padding-right: $global-gutter;
-				width: auto;
-			}
-		}
+            li {
+                display: inline-block;
+                list-style: none;
+                width: 100%;
+            }
+        }
 
-		[aria-invalid='true'] {
-			border-color: $danger;
-		}
-	}
+        .InputfieldRadiosFloated {
 
-	.uk-checkbox {
+            li {
+                padding-right: $global-gutter;
+                width: auto;
+            }
+        }
 
-		+ span {
-			display: inline-block;
-			margin-left: $global-small-margin;
-		}
-	}
+        [aria-invalid='true'] {
+            border-color: $danger;
+        }
+    }
 
-	.uk-radio {
+    .uk-checkbox {
 
-		+ span {
-			display: inline-block;
-			margin-left: $global-small-margin;
-		}
-	}
+        +span {
+            display: inline-block;
+            margin-left: $global-small-margin;
+        }
+    }
 
-	.InputfieldToggle {
+    .uk-radio {
 
-		.InputfieldToggleHelper {
-			display: none !important;
-		}
-	}
+        +span {
+            display: inline-block;
+            margin-left: $global-small-margin;
+        }
+    }
 
-	&-error {
-		font-size: $global-small-font-size;
-		font-weight: $base-strong-font-weight;
-		margin-bottom: $global-small-margin / 2;
-	}
+    .InputfieldToggle {
 
-	.g-recaptcha {
-		margin-bottom: $global-gutter;
-	}
+        .InputfieldToggleHelper {
+            display: none !important;
+        }
+    }
+
+    &-error {
+        font-size: $global-small-font-size;
+        font-weight: $base-strong-font-weight;
+        margin-bottom: $global-small-margin / 2;
+    }
+
+    .g-recaptcha {
+        margin-bottom: $global-gutter;
+    }
 }

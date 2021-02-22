@@ -67,32 +67,76 @@
 
     </main>
 
-    <footer class="footer uk-padding-large uk-padding-remove-horizontal">
-        {{#> ukContainer class="uk-text-center"}}
-        {{#*inline "out"}}
+    <footer class="footer">
+        <div class="footer-top margin-bottom">
+            {{#> ukContainer size="large" class="uk-text-center"}}
+            {{#*inline "out"}}
+                <div class="uk-flex uk-flex-between">
+                    <div class="uk-text-left uk-width-3-5@m">
+                        <p class="uk-text-bold">Take advantage of commercial, innovation and economic opportunities within the Blue Economy Cluster Builder comunity</p>
+                        <div class="uk-flex contact">
+                            {{> ukButton link="#" pull="left" icon="arrow-right" label="Contact us" style="primary"}}
+                            {{> ukButton link="#" pull="left" icon="member" label="Become a member" style="primary"}}
+                        </div>
+                    </div>
+                    <div class="uk-flex uk-flex-column uk-flex-right connect">
+                        <div class="uk-flex">
+                            <span class="uk-text-bold">Let’s connect</span>
+                            <ul class="uk-list uk-flex uk-padding-remove">
+                                <li class="uk-margin-small-left">
+                                    <a class="uk-background-primary uk-border-circle uk-display-block uk-position-relative" href="#" aria-label="Visit our Twitter page">
+                                        {{> renderIcon name="twitter" class="uk-position-center"}}
+                                    </a>
+                                </li>
+                                <li class="uk-margin-remove-top uk-margin-small-left">
+                                    <a class="uk-background-primary uk-border-circle uk-display-block uk-position-relative" href="#" aria-label="Visit our Linkedin page">
+                                        {{> renderIcon name="linkedin" class="uk-position-center"}}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="uk-flex uk-flex-column uk-flex-top">
+                            <div class="uk-margin-small-bottom">
+                                {{> ukButton link="tel:+4401234567891" pull="left" icon="phone" label="+44 (0) 1234 567891" style="text" class="uk-button-small"}}                  
+                            </div>
+                            <div>
+                                {{> ukButton link="mailto:jennifer.fox@aquatera.co.uk" pull="left" icon="email" label="jennifer.fox@aquatera.co.uk" style="text" class="uk-button-small"}}   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/inline}}
+            {{/ukContainer}}      
+        </div>  
+        <div class="footer-bottom uk-text-center">
 
-        {{#if legal}}
-        <div class="legal uk-margin-small-bottom">
-            <ul>
-                {{#each legal}}
-                <li>
-                    <a href="#">{{this}}</a>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-        {{/if}}
+            <div class="uk-flex uk-flex-between uk-flex-middle">
+                <div class="uk-flex uk-flex-middle">
+                    <a href="#"><img class="logo" src="./img/footer-logo.png" loading="lazy" width="257" height="58" alt="image"></a>
 
-        <div class="copyright uk-margin-small-bottom">Copyright &copy; {{year}} {{nb.clientName}}. All rights reserved.
-        </div>
+                    <div class="copyright">Copyright &copy; {{year}} {{nb.clientName}}. All rights reserved.</div>
+                </div>
 
-        <div class="watermark">
-            Website by <a title="NB Communication - Digital Marketing Agency" target="_blank" rel="noopener"
-                href="https://www.nbcommunication.com/">NB <img src="https://brand.nbcommunication.com/logo/web/nb.png"
-                    alt="NB Communication Ltd Logo" loading="lazy"></a>
+                <div class="uk-flex uk-flex-middle uk-flex-between">
+                    {{#if legal}}
+                    <div class="legal uk-flex">
+                        <ul>
+                            {{#each legal}}
+                            <li>
+                                <a href="#">{{this}}</a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/if}}
+                    <div class="watermark">Website by <a title="NB Communication - Digital Marketing Agency" target="_blank" rel="noopener"
+                        href="https://www.nbcommunication.com/">NB <img src="https://brand.nbcommunication.com/logo/web/nb.png"
+                            alt="NB Communication Ltd Logo" loading="lazy"></a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        {{/inline}}
-        {{/ukContainer}}
     </footer>
 
     <script src="./js/uikit.min.js"></script>

@@ -1,0 +1,26 @@
+@mixin hook-table {
+    border-bottom: 1px solid $blue-light-alt;
+
+    thead tr {
+        background-color: $global-color;
+    }
+
+    tbody tr {
+
+        &:nth-child(odd) {
+            background-color: $blue-light;
+        }
+
+        td:first-child {
+            font-weight: $bold;
+        }
+    }
+}
+
+@mixin hook-table-header-cell {
+    text-transform: none;
+}
+
+@mixin hook-table-cell {
+    font-size: 16px;
+}

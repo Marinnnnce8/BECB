@@ -1,59 +1,118 @@
 .content {
 
-	figure {
+    figure {
         border-radius: 20px;
-		caption-side: bottom;
-		display: table;
-		margin-top: 0;
-		outline: none;
+        caption-side: bottom;
+        display: table;
+        margin-top: 0;
+        outline: none;
 
-		a {
-			display: inline-block;
-			width: auto;
-		}
+        a {
+            display: inline-block;
+            width: auto;
+        }
 
-		img {
-			display: block;
-			height: auto;
+        img {
+            display: block;
+            height: auto;
 
-			@media (max-width: $breakpoint-mobile) {
-				width: 100%;
-			}
-		}
-	}
+            @media (max-width: $breakpoint-mobile) {
+                width: 100%;
+            }
+        }
+    }
 
-	figcaption {
-		@include image-caption;
-		display: table-caption;
-	}
+    figcaption {
+        @include image-caption;
+        display: table-caption;
+    }
 
-	.align_right {
-		float: right;
-		margin-bottom: $global-medium-gutter;
-		margin-left: $global-medium-gutter;
-	}
+    .align_right {
+        float: right;
+        margin-bottom: $global-medium-gutter;
+        margin-left: $global-medium-gutter;
+    }
 
-	.align_left {
-		float: left;
-		margin-bottom: $global-medium-gutter;
-		margin-right: $global-medium-gutter;
-	}
+    .align_left {
+        float: left;
+        margin-bottom: $global-medium-gutter;
+        margin-right: $global-medium-gutter;
+    }
 
-	.align_center {
-		clear: both;
-		margin: $global-gutter auto;
-		text-align: center;
-	}
+    .align_center {
+        clear: both;
+        margin: $global-gutter auto;
+        text-align: center;
+    }
 
-	@media (max-width: $breakpoint-mobile) {
+    .embeded-video {
+        min-height: 531px;
+        border-radius: 20px;
 
-		.align_right,
-		.align_left,
-		.align_center {
-			clear: both;
-			float: none;
-			margin: $global-small-gutter 0;
-			width: 100%;
-		}
-	}
+        .uk-preserve {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-28%);
+        }
+
+        >a span {
+            width: 96px;
+            height: 96px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -72%);
+            transition: $transition;
+        }
+
+        .icon-play {
+            width: 36px;
+            height: 39px;
+            color: $white;
+            left: 35px;
+            top: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+            transition: $transition;
+        }
+
+        >div {
+            background-color: $blue-light;
+            padding: 24px 20px 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+            span {
+                font-size: 16px;
+                line-height: 27.2px;
+            }
+        }
+
+        h2 {
+            line-height: 1;
+            margin-top: 7px;
+        }
+
+        @include hover {
+            >a span {
+                background-color: $white;
+            }
+
+            .icon-play {
+                color: $global-color;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+
+        .align_right,
+        .align_left,
+        .align_center {
+            clear: both;
+            float: none;
+            margin: $global-small-gutter 0;
+            width: 100%;
+        }
+    }
 }

@@ -1,0 +1,29 @@
+@mixin hook-card {
+    box-shadow: none;
+}
+
+@mixin hook-card-media-top {
+    width: 276px;
+    height: 276px;
+    margin-bottom: 23px;
+    transition: $transition;
+
+    &::after {
+        background-color: $white;
+        content: '';
+        border-radius: 50%;
+        width: 187px;
+        height: 187px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        position: absolute;
+        z-index: 0;
+    }
+}
+
+@mixin hook-card-title {
+    box-shadow: none;
+    color: $global-color;
+}
