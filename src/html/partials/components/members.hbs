@@ -1,0 +1,33 @@
+<div class="members">
+    {{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
+		{{#*inline "out"}}
+            <div class="members-inner uk-text-center uk-position-relative uk-overflow-hidden">
+                <img src="./img/members-shape.svg" class="uk-position-bottom" data-uk-svg alt="shape">
+
+                {{#if title}}<h2 class="uk-margin-medium-bottom">{{title}}</h2>{{/if}}
+                {{#> ukGrid class="uk-grid-large uk-child-width-1-3"}}
+                    {{#*inline "cells"}}
+                        {{#each items}}
+                            {{#with this}}
+                                <div>
+                                    <div class="uk-card uk-flex uk-flex-column uk-flex-middle">
+                                        <a class="uk-position-cover" href="{{href}}" aria-label="{{label}}"></a>
+                                        <div class="uk-card-media-top uk-position-relative uk-border-circle">
+                                            <img class="uk-position-center uk-width-1-1" loading="lazy" width="{{width}}" height="{{height}}" src="./img/{{img}}" alt="{{alt}}">
+                                            <img class="uk-position-center uk-position-z-index" loading="lazy" widthSec="{{widthSec}}" heightSec="{{heightSec}}" src="./img/{{imgSec}}" alt="{{altSec}}">
+                                        </div>
+                                        <div class="uk-card-body uk-padding-remove">
+                                            <span>{{sectorName}}</span>
+                                            <h3 class="uk-margin-remove-top">{{title}}</h3>
+                                            {{> ukButton link=href pull="left" icon="arrow-right" label="Find out more" style="secondary" class="uk-button-small"}}
+                                        </div>
+                                    </div>
+                                </div>
+                            {{/with}}
+                        {{/each}}
+                    {{/inline}}
+                {{/ukGrid}}
+                </div>
+		{{/inline}}
+	{{/ukContainer}}
+</div>

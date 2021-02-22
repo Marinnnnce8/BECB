@@ -1,0 +1,53 @@
+@mixin hook-accordion {
+
+    >:nth-child(n+1) {
+        padding: 18px 30px 18px 32px;
+        background-color: $blue-light;
+        border-radius: 6px;
+
+        &.uk-open .uk-accordion-title::after {
+            opacity: 0;
+        }
+    }
+}
+
+@mixin hook-accordion-item {
+    padding: 18px 30px 18px 32px;
+    background-color: $blue-light;
+    border-radius: 6px;
+
+    &.uk-open .uk-accordion-title::after {
+        opacity: 0;
+    }
+}
+
+@mixin hook-accordion-title {
+    font-weight: $bold;
+    position: relative;
+
+    &::after,
+    &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        background-color: $global-color;
+    }
+
+    &::after {
+        width: 1px;
+        height: 20px;
+        right: 10px;
+        transform: translate(50%, -50%);
+    }
+
+    &::before {
+        height: 1px;
+        width: 20px;
+        right: 0;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin hook-accordion-content {
+    padding-bottom: 20px;
+}

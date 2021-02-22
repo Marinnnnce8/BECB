@@ -1,0 +1,14 @@
+<div class="social uk-position-relative uk-text-center">
+    <span class="uk-text-small">Share this story with your network:</span>
+    <ul class="uk-list uk-flex uk-margin-top uk-flex-center">
+        {{#each social}}
+            {{#with this}}
+            <li class="uk-margin-remove-top uk-margin-small-left">
+                <a class="uk-background-primary uk-border-circle uk-display-block uk-position-relative" href="{{url}}" aria-label="Visit our {{label}} page">
+                    {{> renderIcon name=icon class="uk-position-center"}}
+                </a>
+            </li>
+            {{/with}}
+        {{/each}}
+    </ul>
+</div>

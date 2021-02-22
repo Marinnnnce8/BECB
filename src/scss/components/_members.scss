@@ -1,0 +1,53 @@
+.members {
+    margin-bottom: 177px;
+
+    &-inner {
+        background-color: $blue-light;
+        border-radius: 60px;
+        padding: 15px 60px 78px;
+    }
+
+    .uk-card {
+        padding-left: 58px;
+        padding-right: 58px;
+
+        >a {
+            z-index: 2;
+        }
+
+        @include hover {
+            .uk-card-media-top {
+                transform: scale(1.1);
+            }
+
+            .uk-button-secondary svg {
+                transform: translateX(-30%);
+            }
+        }
+    }
+
+    .uk-card-body {
+        >span {
+            font-size: 20px;
+        }
+    }
+
+    .uk-button-secondary {
+        padding-top: 50px;
+        padding-left: 0;
+
+        &::before {
+            width: 64px;
+            height: 40px;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, 0);
+        }
+
+        svg {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 12px;
+        }
+    }
+}

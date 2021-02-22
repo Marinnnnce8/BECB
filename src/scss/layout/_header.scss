@@ -1,9 +1,41 @@
 .header {
 
-	.uk-logo {
+    .uk-logo {
 
-		img {
-			width: 228px;
-		}
-	}
+        img {
+            width: 228px;
+        }
+    }
+
+    .contact {
+        a:nth-of-type(-n + 2) {
+            width: 46px;
+            height: 46px;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                color: $global-color;
+            }
+        }
+
+        &:last-child {
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+    }
+
+    @media (min-width: $breakpoint-small) {
+        padding: 14px 60px 0;
+
+        .uk-logo {
+
+            img {
+                width: 370px;
+            }
+        }
+    }
 }

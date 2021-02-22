@@ -1,0 +1,26 @@
+.social {
+    &:not(.social-footer) {
+        padding: 15px 0 100px;
+    }
+
+    a {
+        transition: $transition;
+        width: 60px;
+        height: 60px;
+
+        svg {
+            color: $success;
+            width: 24px;
+            height: 24px;
+            transition: $transition;
+        }
+
+        @include hover {
+            background-color: $success;
+
+            svg {
+                color: $global-color;
+            }
+        }
+    }
+}

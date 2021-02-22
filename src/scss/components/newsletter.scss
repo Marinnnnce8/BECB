@@ -1,0 +1,27 @@
+.newsletter {
+    border-radius: 60px;
+    background-color: $blue-light;
+    padding: 67px 30px 80px;
+
+    .uk-button {
+        background-color: $global-color;
+        color: $white;
+
+        svg {
+            color: $success;
+        }
+
+        @include hover {
+            background-color: $success;
+            color: $global-color;
+
+            svg {
+                color: $white;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-small) {
+        padding: 67px 65px 80px;
+    }
+}
