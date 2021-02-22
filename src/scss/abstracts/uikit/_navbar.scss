@@ -1,0 +1,104 @@
+@mixin hook-navbar-nav-item {
+    font-weight: $bold;
+    min-height: 0;
+    padding: 20px 10px 10px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        left: 50%;
+        content: '';
+        bottom: 4px;
+        height: 2px;
+        background-color: $global-color;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: $transition;
+        width: calc(100% - 40px);
+    }
+
+    @media (min-width: $breakpoint-medium + 1) {
+        font-size: 18px;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        padding: 20px 20px 10px;
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        text-transform: uppercase;
+    }
+}
+
+@mixin hook-navbar-nav-item-hover {
+    &::before {
+        opacity: 1;
+    }
+}
+
+@mixin hook-navbar-toggle {
+    padding: 0 32px;
+    height: 64px;
+    width: 64px;
+    z-index: 1002;
+    min-height: 0;
+    position: relative;
+
+    span {
+        position: absolute;
+        left: 50%;
+        width: 25px;
+        height: 2px;
+        background: $global-color;
+        content: '';
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .1s ease;
+
+        &::after,
+        &::before {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $global-color;
+            content: '';
+            transition: .1s ease;
+        }
+
+        &::after {
+            top: -7px;
+        }
+
+        &::before {
+            top: 7px;
+            width: 80%;
+        }
+    }
+
+    &[aria-expanded='true'] {
+
+        span {
+            background: transparent;
+            transition: .1s ease;
+
+            &::after,
+            &::before {
+                top: 0;
+                transition: .1s ease;
+                background: $secondary;
+            }
+
+            &::after {
+                transform: rotate(45deg);
+                left: 0;
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+                right: 0;
+                width: 100%;
+            }
+        }
+    }
+}

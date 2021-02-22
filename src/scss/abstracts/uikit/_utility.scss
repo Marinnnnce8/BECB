@@ -1,0 +1,29 @@
+@mixin hook-logo {
+    margin-right: 15px;
+    z-index: 1002;
+
+    img {
+        width: 195px;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+
+        img {
+            width: 250px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large) {
+        margin-right: 55px;
+
+        img {
+            width: 300px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large-m) {
+        img {
+            width: 370px;
+        }
+    }
+}

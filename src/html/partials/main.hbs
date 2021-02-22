@@ -29,15 +29,15 @@
     <header class="header" data-uk-sticky="media: 960; animation: uk-animation-slide-top; show-on-up: true;">
         <nav class="uk-navbar-container uk-navbar uk-navbar-transparent" data-uk-navbar>
 
-            <div class="uk-navbar-left">
-                <a href="./" class="uk-navbar-item uk-logo">
+            <div class="uk-navbar-left uk-flex-bottom">
+                <a href="./" class="uk-logo">
                     <img src="{{logo}}" alt="{{nb.siteName}} Logo">
                 </a>
             </div>
 
             {{#if menu}}
             <div class="uk-width-expand">
-                <div class="contact uk-flex uk-flex-right">
+                <div class="contact contact-desk uk-flex uk-flex-right">
                     <a class="uk-display-block uk-position-relative uk-margin-small-right" href="#" aria-label="Visit our Twitter page">
                         {{> renderIcon name="twitter" class="uk-position-center"}}
                     </a>
@@ -47,13 +47,13 @@
                     {{> ukButton link="#" pull="left" icon="member" label="Become a member" style="primary" class="uk-button-small"}}
                 </div>
                 <div class="uk-navbar-left">
+                    <a href="#nav" class="uk-navbar-toggle" data-uk-toggle="animation: uk-animation-slide-right;"
+                        aria-label="Toggle Navigation" hidden>
+                        <span role="presentation"></span>
+                    </a>                    
                     <div id="nav">
                         {{> renderNavigation}}
                     </div>
-                    <a href="#nav" class="uk-navbar-toggle" data-uk-toggle="animation: uk-animation-slide-left;"
-                        aria-label="Toggle Navigation" hidden>
-                        <span data-uk-navbar-toggle-icon></span>
-                    </a>
                 </div>
             </div>
             {{/if}}
@@ -78,7 +78,7 @@
 
     </main>
 
-    <footer class="footer">
+    {{!-- <footer class="footer">
         <div class="footer-top margin-bottom">
             {{#> ukContainer size="large" class="uk-text-center"}}
             {{#*inline "out"}}
@@ -148,7 +148,7 @@
             </div>
 
         </div>
-    </footer>
+    </footer> --}}
 
     <script src="./js/uikit.min.js"></script>
     <script src="./js/nbkit.min.js"></script>

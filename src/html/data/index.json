@@ -7,19 +7,21 @@
 	"cta": "Find out more",
 	"menu": [
 		{
-			"name": "home",
-			"title": "Home",
-			"url": "home.html"
+			"name": "our-members",
+			"title": "Our Members",
+			"url": "our-members.html"
 		},
 		{
 			"name": "about",
-			"title": "About",
-			"children": [
-				{
-					"name": "child",
-					"title": "Child"
-				}
-			]
+			"title": "About"
+		},
+		{
+			"name": "news-and-events",
+			"title": "News and Events"
+		},
+		{
+			"name": "resources",
+			"title": "Resources"
 		},
 		{
 			"name": "contact",

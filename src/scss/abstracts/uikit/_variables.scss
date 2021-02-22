@@ -6,6 +6,7 @@
 $breakpoint-small: 640px;
 $breakpoint-medium: 960px;
 $breakpoint-large: 1200px;
+$breakpoint-large-m: 1400px;
 $breakpoint-xlarge: 1600px;
 $breakpoint-xsmall-max: ($breakpoint-small - 1);
 $breakpoint-small-max: ($breakpoint-medium - 1);
@@ -206,5 +207,8 @@ $accordion-item-margin-top: 10px;
 $accordion-content-margin-top: 30px;
 
 //
-// Card
+// Navbar
 //
+$navbar-nav-item-font-size: 20px;
+$navbar-nav-item-font-family: $font-exo;
+$navbar-nav-item-color: $global-color;
