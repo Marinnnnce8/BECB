@@ -1,0 +1,79 @@
+.academia {
+    >.uk-preserve {
+        top: 0;
+        width: 217vw;
+        max-width: 300vw;
+        left: -40%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    h2 {
+        margin-bottom: 113%;
+    }
+
+    .uk-button {
+        text-align: left;
+
+        // &::before {
+        //     height: 60px;
+        //     top: 50%;
+        //     transform: translateY(-50%);
+        // }
+    }
+
+    @media (min-width: $breakpoint-small) {
+        min-height: 900px;
+        padding-right: 100px;
+
+        >.uk-preserve {
+            top: 0;
+            right: 50px;
+            width: 106%;
+            max-width: 106%;
+            left: -160px;
+        }
+
+        &-text {
+            max-width: 430px;
+            margin-top: 13%;
+        }
+
+        h2 {
+            margin-bottom: 150px;
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        &-text {
+            margin-top: 23%;
+        }
+
+        h2 {
+            margin-bottom: 200px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large) {
+        min-height: 1235px;
+        padding-right: 175px;
+
+        &-text {
+            margin-top: 275px;
+        }
+
+        h2 {
+            margin-bottom: 300px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large-m) {
+        &-text {
+            margin-top: 26%;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        padding: 30px 13px 120px 20px;
+    }
+}

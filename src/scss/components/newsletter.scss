@@ -1,7 +1,7 @@
 .newsletter {
-    border-radius: 60px;
+    border-radius: 40px;
     background-color: $blue-light;
-    padding: 67px 30px 80px;
+    padding: 43px 10px 90px;
 
     .uk-button {
         background-color: $global-color;
@@ -21,7 +21,22 @@
         }
     }
 
+    @media (min-width: $breakpoint-medium) {
+        border-radius: 60px;
+    }
+
     @media (min-width: $breakpoint-small) {
         padding: 67px 65px 80px;
+    }
+
+    @media (max-width: $breakpoint-small) {
+        >.uk-preserve {
+            bottom: 25px;
+        }
+
+        .uk-button {
+            max-width: 280px;
+            width: 100%;
+        }
     }
 }

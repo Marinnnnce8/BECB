@@ -80,26 +80,25 @@
 			},
 			"post": [
 				{
-					"title": "News Post 1",
+					"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elitlit",
 					"url": "#",
-					"date_pub": "April 20th 2020",
-					"getImage": "https://aws.nbcommunication.com/template/img/placeholder-columns.jpg",
-					"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+					"date_pub": "December 12, 2020",
+					"getImage": "./img/post-1.png",
+					"getSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis velit id vel pulvinar nisl integer adipiscing velit leo."
 				},
 				{
-					"title": "News Post 2",
+					"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elited enim turpis nunc id",
 					"url": "#",
-					"date_pub": "April 17th 2020",
-					"getImage": "https://aws.nbcommunication.com/template/img/placeholder-skyscrapers.jpg",
-					"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+					"date_pub": "December 12, 2020",
+					"getImage": "./img/post-2.png",
+					"getSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis velit id vel pulvinar nisl integer adipiscing velit leo."
 				},
 				{
-					"title": "News Post 3",
+					"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elitlit",
 					"url": "#",
-					"dates": "April 1st 2020, 5pm",
-					"location": "Somewhere over the rainbow",
-					"getImage": "https://aws.nbcommunication.com/template/img/placeholder-sprinkler.jpg",
-					"getSummary": "This is actually an event, to demonstrate the dates and location fields."
+					"dates": "December 12, 2020",
+					"getImage": "./img/post-3.png",
+					"getSummary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis velit id vel pulvinar nisl integer adipiscing velit leo."
 				}
 			]
 		},

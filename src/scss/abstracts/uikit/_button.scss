@@ -120,15 +120,11 @@
         position: absolute;
         content: '';
         left: 0;
-        top: 0;
-        bottom: 0;
+        height: 60px;
+        top: 50%;
+        transform: translateY(-50%);
         background-color: $global-color;
-    }
-
-    &::before {
-        height: 100%;
         width: 83px;
-        background-color: $global-color;
         transition: inherit;
         z-index: 0;
         border-radius: 50px;
@@ -150,6 +146,14 @@
     &.uk-button-large {
         padding-left: 98px;
         padding-right: 0;
+    }
+
+    &.uk-button-small::before {
+        height: 42px;
+    }
+
+    &.uk-button-large::before {
+        height: 72px;
     }
 
     @include hover {

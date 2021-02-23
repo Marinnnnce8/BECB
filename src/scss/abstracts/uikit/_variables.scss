@@ -115,7 +115,7 @@ $container-xsmall-max-width: 750px;
 $container-small-max-width: 787px;
 $container-large-max-width: 1400px;
 $container-xlarge-max-width: 1483px;
-$container-padding-horizontal: 15px;
+$container-padding-horizontal: 20px;
 $container-padding-horizontal-s: $global-gutter;
 $container-padding-horizontal-m: $global-medium-gutter;
 
@@ -216,3 +216,11 @@ $accordion-content-margin-top: 30px;
 $navbar-nav-item-font-size: 20px;
 $navbar-nav-item-font-family: $font-exo;
 $navbar-nav-item-color: $global-color;
+
+//
+// Card
+//
+$card-default-background: transparent;
+$card-default-title-color: $global-color;
+$card-title-font-size: 26px;
+$card-title-line-height: 31px;

@@ -1,7 +1,7 @@
 @mixin hook-slidenav {
     background-color: $white;
-    width: 90px;
-    height: 90px;
+    width: 45px;
+    height: 45px;
     transition: $transition;
 
     svg {
@@ -13,6 +13,21 @@
 
         svg {
             color: $white;
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        width: 90px;
+        height: 90px;
+    }
+
+    @media (min-width: $breakpoint-small-max) {
+        svg {
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
         }
     }
 }

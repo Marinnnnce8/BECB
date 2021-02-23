@@ -1,9 +1,10 @@
 .footer {
+    padding-top: 90px;
 
     &-top {
         p {
-            font-size: 34px;
-            line-height: 40.8px;
+            font-size: 26px;
+            line-height: 31.2px;
             font-family: $font-exo;
         }
 
@@ -35,12 +36,17 @@
     }
 
     &-bottom {
+        padding: 40px 20px 23px;
         font-size: 14px;
+
+        .logo {
+            max-width: 257px;
+        }
     }
 
     .connect {
         span {
-            font-size: 26px;
+            font-size: 20px;
             font-family: $font-exo;
         }
 
@@ -97,7 +103,7 @@
             li {
                 display: inline-block;
                 list-style: none;
-                margin: 0 30px 0 0;
+                margin: 0 20px 0 0;
                 padding: 0;
 
                 a {
@@ -144,9 +150,34 @@
 
             p {
                 margin-bottom: 40px;
+                font-size: 34px;
+                line-height: 40.8px;
             }
         }
 
+        &-bottom {
+            padding: 40px 40px 23px;
+        }
+
+        .connect {
+            span {
+                font-size: 26px;
+            }
+
+            >div:first-child {
+                margin-bottom: 45px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        &-bottom .logo {
+            max-width: 200px;
+            margin-right: 20px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large-m) {
         &-bottom {
             padding: 40px 60px 23px;
 
@@ -156,8 +187,94 @@
             }
         }
 
-        .connect>div:first-child {
-            margin-bottom: 45px;
+        .legal ul li {
+            margin: 0 30px 0 0;
+        }
+    }
+
+    @media (max-width: $breakpoint-large) {
+        &-bottom>.uk-flex {
+            flex-direction: column;
+
+            >.uk-flex:first-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        &-top {
+            padding-bottom: 35px;
+
+            .uk-container>.uk-flex {
+                flex-direction: column;
+
+                >div:first-child {
+                    margin-bottom: 70px;
+                }
+            }
+        }
+
+        &-bottom {
+            >.uk-flex>.uk-flex:first-child {
+                flex-direction: column;
+
+                >a {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        &-bottom>.uk-flex {
+            >.uk-flex:first-child {
+                width: 100%;
+            }
+        }
+
+        .contact {
+            flex-direction: column;
+
+            .uk-button {
+                margin-top: 20px;
+                max-width: 280px;
+                width: 100%;
+
+                &:first-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .connect {
+            .uk-flex {
+                &:first-child {
+                    margin-bottom: 35px;
+                }
+
+                &:last-child div:last-child {
+                    margin-top: 15px;
+                }
+            }
+
+            .uk-list {
+                margin: 0;
+            }
+        }
+
+        .legal {
+            width: 100%;
+
+            ul {
+                margin: 20px 0 30px;
+                width: 100%;
+                display: flex;
+
+                li:last-child {
+                    margin: 0;
+                }
+            }
         }
     }
 }

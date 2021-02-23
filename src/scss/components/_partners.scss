@@ -34,20 +34,58 @@
     }
 
     @media (min-width: $breakpoint-medium) {
-        padding-right: 60px;
-        padding-left: 190px;
+        padding-right: 40px;
+        padding-left: 90px;
 
         &-text {
-            width: 540px;
+            // max-width: 540px;
+            margin-right: 40px;
         }
+
+        &-image {
+            height: 580px;
+            width: 580px;
+        }
+
+        blockquote {
+            margin-bottom: 50px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large) {
+        margin-top: 350px;
+
+        &-text {
+            max-width: 500px;
+
+            >.uk-flex>div:first-child {
+                margin-right: 15px;
+            }
+
+            &-image {
+                width: 310px;
+                height: 310px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        padding-right: 60px;
+        padding-left: 190px;
 
         &-image {
             width: 710px;
             height: 710px;
         }
 
-        blockquote {
-            margin-bottom: 50px;
+        &-text {
+            max-width: 540px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        >.uk-flex {
+            flex-direction: column;
         }
     }
 }

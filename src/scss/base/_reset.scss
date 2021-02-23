@@ -10,3 +10,14 @@
         box-sizing: border-box;
     }
 }
+
+html,
+body {
+    overflow-x: hidden;
+
+    @media (max-width: $breakpoint-small) {
+        p {
+            font-size: 16px;
+        }
+    }
+}

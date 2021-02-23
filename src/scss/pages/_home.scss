@@ -1,5 +1,6 @@
 .template-home {
     .banner {
+        padding-bottom: 80px;
         padding-top: 30px;
 
         .uk-button-primary {
@@ -14,6 +15,10 @@
                 color: $success;
             }
         }
+    }
+
+    .newsletter-home .uk-container-small {
+        max-width: 965px;
     }
 
     @media (min-width: $breakpoint-small) {

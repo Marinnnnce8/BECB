@@ -115,7 +115,7 @@ const main = {
 						) : '') +
 						// CTA
 						(config.cta ? nb.wrap(
-							nb.link(item.url, config.cta, 'uk-button uk-button-text'),
+							nb.link(item.url, config.cta, 'uk-button uk-button-secondary uk-button-small'),
 							'uk-card-footer'
 						) : ''),
 						'uk-card uk-card-default'

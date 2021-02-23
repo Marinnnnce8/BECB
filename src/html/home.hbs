@@ -25,7 +25,7 @@
                     {{>renderIcon name="quotes"}}
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae quis tincidunt augue pretium quam aliquam. Pharetra, est tempor nulla tellus risus lorem id urna. Gravida enim sapien nibh enim ut sed. Hendrerit commodo viverra urna massa euismod vel mauris.</p>
                 </blockquote>
-                <div class="uk-flex uk-flex-between">
+                <div class="uk-flex uk-flex-between uk-flex-wrap">
                     <div>
                         {{> ukButton pull="left" icon="arrow-right" label="Meet the partner" style="primary"}}
                     </div>
@@ -40,18 +40,19 @@
         </div>
     </div>
 
-	{{#> ukSection size="large"}}
+	{{#> ukSection size="xlarge"}}
 		{{#*inline "out"}}
-
-		{{> nbJson id="posts" data=items.posts}}
-
+        <div class="uk-position-relative latest-news uk-overflow-hidden">
+            <img src="./img/latest-news-shape.svg" class="uk-preserve uk-position-bottom" data-uk-svg alt="latest news shape">
+            {{> nbJson id="posts" data=items.posts}}
+        </div>
 		{{/inline}}
 	{{/ukSection}}
 
-    <div>
+    <div class="academia uk-position-relative">
         <img src="./img/academia-shape.svg" class="uk-preserve" data-uk-svg alt="academia shape">
         <div class="uk-flex uk-flex-right">
-            <div>
+            <div class="academia-text">
                 <h2>Academia</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing ermentum convallis ac sapien sit accumsanon, enim pretium egestas orci. Eget risus.</p>
                 {{> ukButton pull="left" icon="arrow-right" label="View all academia members" style="secondary"}}
@@ -59,11 +60,13 @@
         </div>
     </div>
 
-    {{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
-        {{#*inline "out"}}
-            {{> newsletter}}
-        {{/inline}}
-	{{/ukContainer}}
+    <div class="newsletter-home">
+        {{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
+            {{#*inline "out"}}
+                {{> newsletter}}
+            {{/inline}}
+        {{/ukContainer}}
+    </div>
 
 	{{/inline}}
 {{/main}}

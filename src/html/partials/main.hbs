@@ -78,7 +78,7 @@
 
     </main>
 
-    {{!-- <footer class="footer">
+    <footer class="footer">
         <div class="footer-top margin-bottom">
             {{#> ukContainer size="large" class="uk-text-center"}}
             {{#*inline "out"}}
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-column uk-flex-right connect">
-                        <div class="uk-flex">
+                        <div class="uk-flex uk-flex-middle">
                             <span class="uk-text-bold">Let’s connect</span>
                             <ul class="uk-list uk-flex uk-padding-remove">
                                 <li class="uk-margin-small-left">
@@ -124,13 +124,12 @@
             <div class="uk-flex uk-flex-between uk-flex-middle">
                 <div class="uk-flex uk-flex-middle">
                     <a href="#"><img class="logo" src="./img/footer-logo.png" loading="lazy" width="257" height="58" alt="image"></a>
-
                     <div class="copyright">Copyright &copy; {{year}} {{nb.clientName}}. All rights reserved.</div>
                 </div>
 
-                <div class="uk-flex uk-flex-middle uk-flex-between">
+                <div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
                     {{#if legal}}
-                    <div class="legal uk-flex">
+                    <div class="legal uk-flex uk-flex-wrap">
                         <ul>
                             {{#each legal}}
                             <li>
@@ -148,7 +147,7 @@
             </div>
 
         </div>
-    </footer> --}}
+    </footer>
 
     <script src="./js/uikit.min.js"></script>
     <script src="./js/nbkit.min.js"></script>
