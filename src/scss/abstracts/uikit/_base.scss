@@ -17,3 +17,22 @@
 @mixin hook-base-h5 {
     letter-spacing: -.02em;
 }
+
+@mixin hook-base-blockquote {
+    position: relative;
+    color: $global-color;
+    font-family: $font-georgia;
+
+    svg {
+        width: 130px;
+        height: 107px;
+        position: absolute;
+        z-index: -1;
+        left: -80px;
+        top: -37px;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        padding-right: 40px;
+    }
+}

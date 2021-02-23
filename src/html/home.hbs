@@ -1,21 +1,69 @@
 {{#> main}}
 	{{#*inline "main"}}
 
-	{{#> ukSection heading="Internal Pages" size="large"}}
-		{{#*inline "out"}}
+    <div class="our-members uk-position-relative">
+        <img src="./img/our-members-shape.svg" class="uk-preserve" data-uk-svg alt="our members shape">
+        <div class="uk-flex uk-flex-between">
+            <div class="our-members-slide">
+                {{> slideshow items=items.slideshowMembers}}
+            </div>
+            <div class="our-members-text">
+                <h2><span class="uk-text-light uk-display-block">Our</span> Members</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae quis tincidunt augue pretium quam aliquam. Pharetra, est tempor nulla tellus risus lorem id urna. Gravida enim sapien nibh enim ut sed. Hendrerit commodo viverra urna massa euismod vel mauris.</p>
+                {{> ukButton pull="left" icon="arrow-right" label=cta style="secondary"}}
+            </div>
+        </div>
+    </div>
 
-		{{> nbJson id="children" data=items.children}}
+    <div class="partners uk-position-relative">
+        <img src="./img/partners-shape.svg" class="uk-preserve" data-uk-svg alt="our partners shape">
+        <div class="uk-flex uk-flex-between">
+            <div class="partners-text">
+                <span class="uk-text-large">Our Partners</span>
+                <h2>Offshore Renewable Energy Catapult</h2>
+                <blockquote>
+                    {{>renderIcon name="quotes"}}
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae quis tincidunt augue pretium quam aliquam. Pharetra, est tempor nulla tellus risus lorem id urna. Gravida enim sapien nibh enim ut sed. Hendrerit commodo viverra urna massa euismod vel mauris.</p>
+                </blockquote>
+                <div class="uk-flex uk-flex-between">
+                    <div>
+                        {{> ukButton pull="left" icon="arrow-right" label="Meet the partner" style="primary"}}
+                    </div>
+                    <div>
+                        {{> ukButton label="View all the partners"}}
+                    </div>
+                </div>
+            </div>
+            <div class="partners-image uk-border-circle uk-position-relative uk-background-cover" data-uk-img style="background-image: url('./img/partners-bckg.png');">
+                <img class="uk-position-center" src="./img/ogtc-logo.png" loading="lazy" width="293" height="224" alt="ogtc logo">
+            </div>
+        </div>
+    </div>
 
-		{{/inline}}
-	{{/ukSection}}
-
-	{{#> ukSection heading="Latest News" size="large"}}
+	{{#> ukSection size="large"}}
 		{{#*inline "out"}}
 
 		{{> nbJson id="posts" data=items.posts}}
 
 		{{/inline}}
 	{{/ukSection}}
+
+    <div>
+        <img src="./img/academia-shape.svg" class="uk-preserve" data-uk-svg alt="academia shape">
+        <div class="uk-flex uk-flex-right">
+            <div>
+                <h2>Academia</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing ermentum convallis ac sapien sit accumsanon, enim pretium egestas orci. Eget risus.</p>
+                {{> ukButton pull="left" icon="arrow-right" label="View all academia members" style="secondary"}}
+            </div>
+        </div>
+    </div>
+
+    {{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
+        {{#*inline "out"}}
+            {{> newsletter}}
+        {{/inline}}
+	{{/ukContainer}}
 
 	{{/inline}}
 {{/main}}

@@ -78,6 +78,8 @@ $base-em-color: inherit;
 $base-selection-background: $secondary;
 $base-heading-font-family: $font-exo;
 $base-heading-color: $global-color;
+$base-h1-font-size-m: 54px;
+$base-h1-font-size: 24px;
 $base-h2-line-height: 1.1;
 $base-h3-font-size: 34px;
 $base-h3-line-height: 1;
@@ -85,7 +87,9 @@ $base-h4-font-size: 34px;
 $base-h4-line-height: 1;
 $base-h4-font-size: 26px;
 $base-h4-line-height: 1;
-
+$base-blockquote-font-style: normal;
+$base-blockquote-font-size: 20px;
+$base-blockquote-line-height: 1.6;
 
 //
 // Form

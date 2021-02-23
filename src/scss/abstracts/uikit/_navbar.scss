@@ -4,21 +4,21 @@
     padding: 20px 10px 10px;
     position: relative;
 
-    &::before {
-        position: absolute;
-        left: 50%;
-        content: '';
-        bottom: 4px;
-        height: 2px;
-        background-color: $global-color;
-        opacity: 0;
-        transform: translateX(-50%);
-        transition: $transition;
-        width: calc(100% - 40px);
-    }
-
     @media (min-width: $breakpoint-medium + 1) {
         font-size: 18px;
+
+        &::before {
+            position: absolute;
+            left: 50%;
+            content: '';
+            bottom: 4px;
+            height: 2px;
+            background-color: $global-color;
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: $transition;
+            width: calc(100% - 40px);
+        }
     }
 
     @media (min-width: $breakpoint-large) {
@@ -31,8 +31,14 @@
 }
 
 @mixin hook-navbar-nav-item-hover {
-    &::before {
-        opacity: 1;
+    @media (min-width: $breakpoint-medium + 1) {
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        color: rgba($global-color, .7);
     }
 }
 

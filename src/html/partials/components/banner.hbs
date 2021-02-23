@@ -1,9 +1,21 @@
-<div class="banner uk-background-cover uk-margin-medium-top uk-position-relative uk-text-center {{#if page.banner.blue}}banner-blue uk-margin-auto{{/if}}"
+<div class="banner uk-background-cover uk-position-relative{{#if page.banner.blue}} banner-blue uk-text-center uk-margin-auto{{else}} uk-margin-medium-top{{/if}}"
     data-src="{{#if page.banner.src}}{{page.banner.src}}{{/if}}" data-uk-img>
-    {{#> ukContainer size=(default page.banner.size (default page.ukContainer ukContainer))}}
-    {{#*inline "out"}}
-    <h1>{{page.h1}}</h1>
-    {{#if (neq page.name "home")}}{{> ukBreadcrumb}}{{/if}}
-    {{/inline}}
-    {{/ukContainer}}
+    {{#if (eq page.name "home")}}
+        <img src="./img/hero-shape.svg" class="uk-preserve" data-uk-svg alt="hero shape">
+        <div class="uk-position-relative uk-position-z-index">
+            <h1>{{page.h1}}</h1>
+            <div class="banner-text">
+                <p class="uk-text-lead uk-text-bold">As the foundation of a strong, sustainable, and diverse Blue Economy in Scotland, SMEs will be the focus of this programme.</p>
+                <p class="uk-text-lead uk-text-normal">This Cluster Builder will provide an inclusive and free-of-charge service to ensure that Scotland’s SMEs are positioned to gain the optimum share of market growth and compete with other international Blue Economies.</p>
+                {{> ukButton class="uk-margin-top" link="#" pull="left" icon="arrow-right" label=cta style="primary"}}
+            </div>
+        </div>
+    {{else}}
+        {{#> ukContainer size=(default page.banner.size (default page.ukContainer ukContainer))}}
+        {{#*inline "out"}}
+        <h1>{{page.h1}}</h1>
+        {{#if (neq page.name "home")}}{{> ukBreadcrumb}}{{/if}}
+        {{/inline}}
+        {{/ukContainer}}
+    {{/if}}
 </div>

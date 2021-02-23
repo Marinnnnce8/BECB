@@ -185,6 +185,31 @@
 				"height": "675"
 			}
 		],
+		"slideshowMembers": [
+			{
+                "background": "member-bg-1.png",
+				"href": "https://www.youtube.com/",
+				"src": "./img/member-1.png",
+				"width": "155",
+				"height": "104",
+				"alt": "This slideshow image has a caption."
+			},
+			{
+                "background": "member-bg-2.png",
+				"href": "https://www.youtube.com/",
+				"src": "./img/member-2.png",
+				"width": "150",
+				"height": "93"
+			},
+			{
+                "background": "member-bg-3.png",
+				"href": "https://www.youtube.com/",
+				"src": "./img/member-3.png",
+				"width": "158",
+				"height": "83",
+				"alt": "This slideshow image has a caption too, without with Markdown!"
+			}
+		],
         "members": [
             {
                 "href": "#",

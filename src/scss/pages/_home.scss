@@ -1,0 +1,86 @@
+.template-home {
+    .banner {
+        padding-top: 30px;
+
+        .uk-button-primary {
+            background-color: $global-color;
+            color: $white;
+
+            &::before {
+                background-color: $success;
+            }
+
+            svg {
+                color: $success;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-small) {
+        .banner {
+            padding-left: 60px;
+
+            .uk-preserve {
+                position: absolute;
+                top: 180px;
+                left: -157px;
+                width: calc(100% + 415px);
+                max-width: calc(100% + 415px);
+                z-index: 0;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        .banner {
+            padding-top: 75px;
+
+            >div {
+                max-width: 725px;
+            }
+
+            .uk-preserve {
+                top: 200px;
+            }
+
+            &-text {
+                max-width: 75%;
+            }
+
+            h1 {
+                font-size: 44px;
+                line-height: 52.8px;
+                margin-bottom: 280px;
+            }
+        }
+
+        h2 {
+            font-size: 54px;
+            line-height: 64.8px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large) {
+        .banner {
+            min-height: 1293px;
+
+            >div {
+                max-width: 800px;
+            }
+
+            .uk-preserve {
+                top: 130px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        .banner {
+            padding-left: 190px;
+
+            .uk-preserve {
+                top: 0;
+            }
+        }
+    }
+}
