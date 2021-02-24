@@ -1,3 +1,8 @@
 @mixin hook-text-lead {
     font-weight: $bold;
+
+    @media (max-width: $breakpoint-small) {
+        font-size: 16px;
+        line-height: 25.6px;
+    }
 }

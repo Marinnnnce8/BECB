@@ -81,6 +81,10 @@
     @media (min-width: $breakpoint-large-m) {
         padding-right: 180px;
         margin-top: -125px;
+
+        &-wrap {
+            max-width: 1450px;
+        }
     }
 
     @media (max-width: $breakpoint-small-max) {

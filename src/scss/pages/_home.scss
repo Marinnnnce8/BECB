@@ -15,41 +15,36 @@
                 color: $success;
             }
         }
+
+        .uk-preserve {
+            position: relative;
+        }
     }
 
     .newsletter-home .uk-container-small {
         max-width: 965px;
     }
 
-    @media (min-width: $breakpoint-small) {
-        .banner {
-            padding-left: 60px;
-
-            .uk-preserve {
-                position: absolute;
-                top: 180px;
-                left: -157px;
-                width: calc(100% + 415px);
-                max-width: calc(100% + 415px);
-                z-index: 0;
-            }
-        }
-    }
-
     @media (min-width: $breakpoint-medium) {
         .banner {
             padding-top: 75px;
+            padding-left: 60px;
 
-            >div {
+            &-title {
                 max-width: 725px;
             }
 
             .uk-preserve {
-                top: 200px;
+                top: 180px;
+                left: -220px;
+                width: calc(100% + 415px);
+                max-width: calc(100% + 415px);
+                position: absolute;
+                z-index: 0;
             }
 
             &-text {
-                max-width: 75%;
+                max-width: 55%;
             }
 
             h1 {
@@ -69,8 +64,12 @@
         .banner {
             min-height: 1293px;
 
-            >div {
+            &-title {
                 max-width: 800px;
+            }
+
+            &-text {
+                max-width: 620px;
             }
 
             .uk-preserve {
@@ -85,7 +84,51 @@
 
             .uk-preserve {
                 top: 0;
+                left: -157px;
             }
+        }
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+
+        .banner-text,
+        .banner-title {
+            padding-right: 20px;
+            padding-left: 60px;
+        }
+
+        .banner-shape {
+            position: relative;
+            overflow-x: hidden;
+
+            .uk-preserve {
+                width: 120vw;
+                max-width: 150vw;
+                left: -5%;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-xsmall-max) {
+
+        .banner-text,
+        .banner-title {
+            padding-left: 20px;
+        }
+
+        .banner-text {
+            margin-top: -160px;
+        }
+
+        .banner-shape .uk-preserve {
+            width: 225vw;
+            max-width: 225vw;
+            left: -97%;
+        }
+
+        .uk-button {
+            max-width: 280px;
+            width: 100%;
         }
     }
 }

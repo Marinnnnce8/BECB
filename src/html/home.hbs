@@ -2,20 +2,23 @@
 	{{#*inline "main"}}
 
     <div class="our-members uk-position-relative">
-        <img src="./img/our-members-shape.svg" class="uk-preserve" data-uk-svg alt="our members shape">
-        <div class="uk-flex uk-flex-between">
-            <div class="our-members-slide">
-                {{> slideshow items=items.slideshowMembers}}
-            </div>
-            <div class="our-members-text">
-                <h2><span class="uk-text-light uk-display-block">Our</span> Members</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae quis tincidunt augue pretium quam aliquam. Pharetra, est tempor nulla tellus risus lorem id urna. Gravida enim sapien nibh enim ut sed. Hendrerit commodo viverra urna massa euismod vel mauris.</p>
-                {{> ukButton pull="left" icon="arrow-right" label=cta style="secondary"}}
+        <div class="our-members-wrap uk-margin-auto">
+            <div class="uk-flex uk-flex-between">
+                <div class="our-members-slide uk-position-relative uk-position-z-index">
+                    {{> slideshow items=items.slideshowMembers}}
+                    <img src="./img/our-members-union-shape.svg" class="uk-preserve uk-hidden@s" data-uk-svg alt="our members union shape">
+                </div>
+                <img src="./img/our-members-shape.svg" class="uk-preserve" data-uk-svg alt="our members shape">
+                <div class="our-members-text">
+                    <h2><span class="uk-text-light uk-display-block">Our</span> Members</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae quis tincidunt augue pretium quam aliquam. Pharetra, est tempor nulla tellus risus lorem id urna. Gravida enim sapien nibh enim ut sed. Hendrerit commodo viverra urna massa euismod vel mauris.</p>
+                    {{> ukButton pull="left" icon="arrow-right" label=cta style="secondary"}}
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="partners uk-position-relative">
+    {{!-- <div class="partners uk-position-relative">
         <img src="./img/partners-shape.svg" class="uk-preserve" data-uk-svg alt="our partners shape">
         <div class="uk-flex uk-flex-between">
             <div class="partners-text">
@@ -66,7 +69,7 @@
                 {{> newsletter}}
             {{/inline}}
         {{/ukContainer}}
-    </div>
+    </div> --}}
 
 	{{/inline}}
 {{/main}}

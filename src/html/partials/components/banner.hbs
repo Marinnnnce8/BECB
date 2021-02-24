@@ -1,14 +1,17 @@
 <div class="banner uk-background-cover uk-position-relative{{#if page.banner.blue}} banner-blue uk-text-center uk-margin-auto{{else}} uk-margin-medium-top{{/if}}"
     data-src="{{#if page.banner.src}}{{page.banner.src}}{{/if}}" data-uk-img>
     {{#if (eq page.name "home")}}
-        <img src="./img/hero-shape.svg" class="uk-preserve" data-uk-svg alt="hero shape">
-        <div class="uk-position-relative uk-position-z-index">
+        <div class="uk-position-relative uk-position-z-index banner-title">
             <h1>{{page.h1}}</h1>
-            <div class="banner-text">
-                <p class="uk-text-lead uk-text-bold">As the foundation of a strong, sustainable, and diverse Blue Economy in Scotland, SMEs will be the focus of this programme.</p>
-                <p class="uk-text-lead uk-text-normal">This Cluster Builder will provide an inclusive and free-of-charge service to ensure that Scotland’s SMEs are positioned to gain the optimum share of market growth and compete with other international Blue Economies.</p>
-                {{> ukButton class="uk-margin-top" link="#" pull="left" icon="arrow-right" label=cta style="primary"}}
-            </div>
+        </div>
+        <div class="banner-shape">
+            <img src="./img/hero-shape.svg" class="uk-preserve" data-uk-svg alt="hero shape">
+        </div>
+        <div class="banner-text uk-position-relative uk-position-z-index">
+            {{> ukButton class="uk-margin-bottom uk-hidden@s" link="#" pull="left" icon="member" label="Become a member" style="primary"}}
+            <p class="uk-text-lead uk-text-bold">As the foundation of a strong, sustainable, and diverse Blue Economy in Scotland, SMEs will be the focus of this programme.</p>
+            <p class="uk-text-lead uk-text-normal">This Cluster Builder will provide an inclusive and free-of-charge service to ensure that Scotland’s SMEs are positioned to gain the optimum share of market growth and compete with other international Blue Economies.</p>
+            {{> ukButton class="uk-margin-top" link="#" pull="left" icon="arrow-right" label=cta style="primary"}}
         </div>
     {{else}}
         {{#> ukContainer size=(default page.banner.size (default page.ukContainer ukContainer))}}
