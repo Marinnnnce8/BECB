@@ -1,25 +1,6 @@
 .newsletter {
     border-radius: 40px;
-    background-color: $blue-light;
-    padding: 43px 10px 90px;
-
-    .uk-button {
-        background-color: $global-color;
-        color: $white;
-
-        svg {
-            color: $success;
-        }
-
-        @include hover {
-            background-color: $success;
-            color: $global-color;
-
-            svg {
-                color: $white;
-            }
-        }
-    }
+    padding: 0 10px 90px;
 
     @media (min-width: $breakpoint-medium) {
         border-radius: 60px;

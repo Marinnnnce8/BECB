@@ -144,19 +144,19 @@
     <h2 class="uk-margin-medium-bottom">FAQ</h2>
 
     <ul data-uk-accordion>
-        <li class="uk-open">
+        <li class="uk-open uk-background-secondary">
             <a class="uk-accordion-title" href="#">Item 1</a>
             <div class="uk-accordion-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </li>
-        <li>
+        <li class="uk-background-secondary">
             <a class="uk-accordion-title" href="#">Item 2</a>
             <div class="uk-accordion-content">
                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
             </div>
         </li>
-        <li>
+        <li class="uk-background-secondary">
             <a class="uk-accordion-title" href="#">Item 3</a>
             <div class="uk-accordion-content">
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
@@ -176,7 +176,7 @@
 
 	<h2>Embedded Videos</h2>
 
-    {{#> ukLightbox class="uk-box-shadow-xlarge embeded-video uk-position-relative" backgroundImage="video-img.jpg" autoplay=true}}
+    {{#> ukLightbox class="uk-box-shadow-xlarge embeded-video uk-position-relative uk-overflow-hidden" backgroundImage="video-img.jpg" autoplay=true}}
         {{#*inline "out"}}
             <img src="./img/becb-shape.svg" class="uk-preserve" data-uk-svg alt="shape">
             <a class="uk-position-cover"
@@ -185,7 +185,7 @@
                     {{>renderIcon name="play" viewBox="24 24"}}
                 </span>
             </a>
-            <div class="uk-position-bottom uk-text-center">
+            <div class="uk-position-bottom uk-text-center uk-background-secondary">
                 <span class="uk-text-uppercase uk-text-bold">Watch how it works</span>
                 <h2>BECB Embeded Video</h2>
             </div>
@@ -205,11 +205,11 @@
 
 		<div>
 			<div class="uk-text-meta uk-form-label">Primary</div>
-			{{> ukButton pull="left" icon="arrow-right" label=cta style="primary"}}
+			{{> ukButton pull="left" icon="arrow-right-solid" label=cta style="primary"}}
 			<div class="uk-text-meta uk-form-label uk-margin-top">Primary Small</div>
-			{{> ukButton pull="left" icon="arrow-right" label=cta style="primary" size="small"}}
+			{{> ukButton pull="left" icon="arrow-right-solid" label=cta style="primary" size="small"}}
 			<div class="uk-text-meta uk-form-label uk-margin-top">Primary Large</div>
-			{{> ukButton pull="left" icon="arrow-right" label=cta style="primary" size="large"}}
+			{{> ukButton pull="left" icon="arrow-right-solid" label=cta style="primary" size="large"}}
 		</div>
 
 		<div>
@@ -223,11 +223,11 @@
 
 		<div>
 			<div class="uk-text-meta uk-form-label">Secondary</div>
-			{{> ukButton pull="left" icon="arrow-right" label=cta style="secondary"}}
+			{{> ukButton pull="left" icon="arrow-right-solid" label=cta style="secondary"}}
 			<div class="uk-text-meta uk-form-label uk-margin-top">Secondary Small</div>
-			{{> ukButton pull="left" icon="arrow-right" label=cta style="secondary" size="small"}}
+			{{> ukButton pull="left" icon="arrow-right-solid" label=cta style="secondary" size="small"}}
 			<div class="uk-text-meta uk-form-label uk-margin-top">Secondary Large</div>
-			{{> ukButton pull="left" icon="arrow-right" label=cta style="secondary" size="large"}}
+			{{> ukButton pull="left" icon="arrow-right-solid" label=cta style="secondary" size="large"}}
 		</div>
 
 		{{/inline}}
@@ -241,7 +241,7 @@
 
     <h2>Form Styles</h2>
 
-	<form id="nb-form-{{page.name}}" class="uk-form-stacked InputfieldForm" method="post" data-uk-nb-form novalidate data-colspacing="1">
+	<form id="nb-form-{{page.name}}" class="uk-form-stacked InputfieldForm uk-background-secondary" method="post" data-uk-nb-form novalidate data-colspacing="1">
 
 		{{#> ukGrid class="uk-grid-small"}}
 			{{#*inline "cells"}}

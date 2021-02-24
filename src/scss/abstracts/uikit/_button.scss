@@ -31,7 +31,7 @@
 @mixin hook-button-primary {
     border-radius: 50px;
     overflow: hidden;
-    padding: 17px 50px 21px 27px;
+    padding: 17px 20px 21px 27px;
     font-weight: $bold;
 
     &::after {
@@ -56,11 +56,37 @@
         padding: 23px 50px 25px 26px;
     }
 
+    &.alt {
+        background-color: $global-color;
+        color: $white;
+        z-index: 1;
+
+        &::after {
+            background-color: $success;
+        }
+
+        svg {
+            color: $success;
+        }
+
+        @include hover {
+            background-color: transparent;
+
+            svg {
+                color: $white;
+            }
+        }
+    }
+
     @include hover {
         &::after {
             transform: scaleX(1);
             transition-delay: 0s;
         }
+    }
+
+    @media (min-width: $breakpoint-small) {
+        padding: 17px 50px 21px 27px;
     }
 }
 

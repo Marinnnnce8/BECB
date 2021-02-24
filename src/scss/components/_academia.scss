@@ -14,15 +14,10 @@
 
     .uk-button {
         text-align: left;
-
-        // &::before {
-        //     height: 60px;
-        //     top: 50%;
-        //     transform: translateY(-50%);
-        // }
     }
 
     @media (min-width: $breakpoint-small) {
+        margin-top: -125px;
         min-height: 900px;
         padding-right: 100px;
 
@@ -36,7 +31,7 @@
 
         &-text {
             max-width: 430px;
-            margin-top: 13%;
+            margin-top: 18%;
         }
 
         h2 {
@@ -55,8 +50,8 @@
     }
 
     @media (min-width: $breakpoint-large) {
-        min-height: 1235px;
         padding-right: 175px;
+        margin-top: -170px;
 
         &-text {
             margin-top: 275px;
@@ -73,7 +68,11 @@
         }
     }
 
+    @media (min-width: $breakpoint-xlarge) {
+        min-height: 1235px;
+    }
+
     @media (max-width: $breakpoint-medium) {
-        padding: 30px 13px 120px 20px;
+        padding: 30px 13px 100px 20px;
     }
 }

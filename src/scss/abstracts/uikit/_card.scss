@@ -2,22 +2,42 @@
     box-shadow: none;
 
     &:not(.uk-card-default) .uk-card-media-top {
-        width: 276px;
-        height: 276px;
+        width: 206px;
+        height: 206px;
         margin-bottom: 23px;
 
         &::after {
             background-color: $white;
             content: '';
             border-radius: 50%;
-            width: 187px;
-            height: 187px;
+            width: 137px;
+            height: 137px;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             display: block;
             position: absolute;
             z-index: 0;
+        }
+
+        img:last-child {
+            max-width: 100px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large) {
+        &:not(.uk-card-default) .uk-card-media-top {
+            width: 276px;
+            height: 276px;
+
+            &::after {
+                width: 187px;
+                height: 187px;
+            }
+
+            img:last-child {
+                max-width: 100%;
+            }
         }
     }
 }

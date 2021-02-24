@@ -3,84 +3,154 @@
         position: absolute;
         top: 85%;
         left: 350px;
-        z-index: 0;
+        z-index: -1;
     }
 
     h2 span {
         color: $azure;
     }
 
-    li {
-        &::before {
-            position: absolute;
-            width: 260px;
-            height: 260px;
-            background-color: $white;
-            content: '';
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 0;
-            border-radius: 50%;
-        }
-    }
-
     &-slide {
+        .uk-preserve {
+            position: absolute;
+            top: 100%;
+            right: 16%;
+            z-index: -1;
+            transform: translate(11%, -31%);
+            left: auto;
+        }
+
         .slideshow {
+            margin: 0 auto;
+            width: calc(100vw - 45px);
+            height: calc(100vw - 45px);
+
             .uk-container-small {
                 max-width: 100%;
                 padding: 0;
             }
+        }
 
-            .uk-slideshow-items {
-                height: calc(100vw - 26px);
-                width: calc(100vw - 26px);
+        .uk-slideshow-items {
+            height: calc(100vw - 45px);
+            width: calc(100vw - 45px);
+        }
+
+        li {
+            &::before {
+                position: absolute;
+                width: 55vw;
+                height: 55vw;
+                background-color: $white;
+                content: '';
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 0;
+                border-radius: 50%;
+            }
+
+            img {
+                max-width: 41vw;
             }
         }
     }
 
-    // @media (min-width: $breakpoint-small) {
-    //     &-slide {
-    //         .slideshow .uk-slideshow-items {
-    //             height: 615px;
-    //             width: 615px;
-    //         }
-    //     }
-    // }
+    @media (min-width: $breakpoint-small) {
+
+        &-slide {
+            .slideshow {
+                height: 70vw;
+                width: 70vw;
+            }
+
+            .uk-slideshow-items {
+                height: 70vw;
+                width: 70vw;
+            }
+
+            li {
+                &::before {
+                    width: 35vw;
+                    height: 35vw;
+                }
+
+                img {
+                    max-width: 30vw;
+                }
+            }
+        }
+
+        .uk-preserve {
+            top: 64%;
+            left: -12%;
+        }
+    }
 
     @media (min-width: $breakpoint-medium) {
+        margin-top: -40px;
         padding-right: 40px;
         padding-left: 60px;
 
         &-text {
             max-width: 580px;
             margin-top: 70px;
+            margin-left: 40px;
         }
 
         &-slide {
             margin-right: 50px;
 
-            .slideshow .uk-slideshow-items {
+            .slideshow {
+                height: auto;
+                width: auto;
+                margin: 0;
+            }
+
+            .uk-slideshow-items {
                 height: 480px;
                 width: 480px;
             }
+
+            li {
+                &::before {
+                    width: 260px;
+                    height: 260px;
+                }
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .uk-preserve {
+            top: 80%;
+            left: 32%;
+            max-width: 60vw;
         }
     }
 
     @media (min-width: $breakpoint-large) {
-        margin-top: -200px;
+        margin-top: -250px;
 
         &-slide {
-            .slideshow .uk-slideshow-items {
+            .uk-slideshow-items {
                 height: 580px;
                 width: 580px;
             }
         }
+
+        .uk-preserve {
+            top: 83%;
+            left: 26%;
+            max-width: none;
+        }
     }
 
     @media (min-width: $breakpoint-large-m) {
+        margin-top: -200px;
         padding-right: 180px;
-        margin-top: -125px;
 
         &-wrap {
             max-width: 1450px;
@@ -88,13 +158,36 @@
     }
 
     @media (max-width: $breakpoint-small-max) {
-        >.uk-flex {
-            flex-direction: column;
+
+        &-wrap>.uk-flex {
+            display: block;
+        }
+
+        &-text {
+            padding-left: 60px;
+            padding-right: 20px;
+        }
+    }
+
+    @media (max-width: $breakpoint-xsmall-max) {
+        h2 {
+            padding: 0 20px;
         }
 
         &-text {
             padding-left: 20px;
-            padding-right: 20px;
+        }
+
+        &-shape {
+            overflow-x: hidden;
+
+            .uk-preserve {
+                position: relative;
+                top: 0;
+                width: 127vw;
+                max-width: 127vw;
+                left: -15%;
+            }
         }
     }
 }

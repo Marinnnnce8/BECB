@@ -4,33 +4,36 @@
     <div class="our-members uk-position-relative">
         <div class="our-members-wrap uk-margin-auto">
             <div class="uk-flex uk-flex-between">
+                <h2 class="uk-hidden@s"><span class="uk-text-light uk-display-block">Our</span> Members</h2>
                 <div class="our-members-slide uk-position-relative uk-position-z-index">
                     {{> slideshow items=items.slideshowMembers}}
                     <img src="./img/our-members-union-shape.svg" class="uk-preserve uk-hidden@s" data-uk-svg alt="our members union shape">
                 </div>
-                <img src="./img/our-members-shape.svg" class="uk-preserve" data-uk-svg alt="our members shape">
-                <div class="our-members-text">
-                    <h2><span class="uk-text-light uk-display-block">Our</span> Members</h2>
+                <img src="./img/our-members-shape.svg" class="uk-preserve uk-visible@s" data-uk-svg alt="our members shape">
+                <div class="our-members-text uk-position-relative uk-position-z-index">
+                    <h2 class="uk-visible@s"><span class="uk-text-light uk-display-block">Our</span> Members</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae quis tincidunt augue pretium quam aliquam. Pharetra, est tempor nulla tellus risus lorem id urna. Gravida enim sapien nibh enim ut sed. Hendrerit commodo viverra urna massa euismod vel mauris.</p>
                     {{> ukButton pull="left" icon="arrow-right" label=cta style="secondary"}}
+                </div>
+                <div class="our-members-shape uk-position-relative uk-hidden@s">
+                    <img src="./img/our-members-shape.svg" class="uk-preserve" data-uk-svg alt="our members shape">
                 </div>
             </div>
         </div>
     </div>
 
-    {{!-- <div class="partners uk-position-relative">
-        <img src="./img/partners-shape.svg" class="uk-preserve" data-uk-svg alt="our partners shape">
+    <div class="partners uk-position-relative">
         <div class="uk-flex uk-flex-between">
             <div class="partners-text">
                 <span class="uk-text-large">Our Partners</span>
-                <h2>Offshore Renewable Energy Catapult</h2>
+                <h2 class="uk-margin-small-top">Offshore Renewable Energy Catapult</h2>
                 <blockquote>
                     {{>renderIcon name="quotes"}}
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae quis tincidunt augue pretium quam aliquam. Pharetra, est tempor nulla tellus risus lorem id urna. Gravida enim sapien nibh enim ut sed. Hendrerit commodo viverra urna massa euismod vel mauris.</p>
                 </blockquote>
-                <div class="uk-flex uk-flex-between uk-flex-wrap">
+                <div class="uk-flex uk-flex-between uk-flex-wrap uk-visible@m">
                     <div>
-                        {{> ukButton pull="left" icon="arrow-right" label="Meet the partner" style="primary"}}
+                        {{> ukButton pull="left" icon="arrow-right-solid" class="alt" label="Meet the partner" style="primary"}}
                     </div>
                     <div>
                         {{> ukButton label="View all the partners"}}
@@ -39,13 +42,22 @@
             </div>
             <div class="partners-image uk-border-circle uk-position-relative uk-background-cover" data-uk-img style="background-image: url('./img/partners-bckg.png');">
                 <img class="uk-position-center" src="./img/ogtc-logo.png" loading="lazy" width="293" height="224" alt="ogtc logo">
+                <img src="./img/partners-shape.svg" class="uk-preserve" data-uk-svg alt="partners union shape">
+            </div>
+            <div class="uk-hidden@m partners-buttons">
+                <div>
+                    {{> ukButton pull="left" icon="arrow-right" label="Meet the partner" style="primary"}}
+                </div>
+                <div>
+                    {{> ukButton label="View all the partners"}}
+                </div>
             </div>
         </div>
     </div>
 
 	{{#> ukSection size="xlarge"}}
 		{{#*inline "out"}}
-        <div class="uk-position-relative latest-news uk-overflow-hidden">
+        <div class="uk-position-relative latest-news uk-overflow-hidden uk-background-secondary">
             <img src="./img/latest-news-shape.svg" class="uk-preserve uk-position-bottom" data-uk-svg alt="latest news shape">
             {{> nbJson id="posts" data=items.posts}}
         </div>
@@ -53,10 +65,11 @@
 	{{/ukSection}}
 
     <div class="academia uk-position-relative">
+        <h2 class="uk-hidden@s">Academia</h2>
         <img src="./img/academia-shape.svg" class="uk-preserve" data-uk-svg alt="academia shape">
         <div class="uk-flex uk-flex-right">
             <div class="academia-text">
-                <h2>Academia</h2>
+                <h2 class="uk-visible@s">Academia</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing ermentum convallis ac sapien sit accumsanon, enim pretium egestas orci. Eget risus.</p>
                 {{> ukButton pull="left" icon="arrow-right" label="View all academia members" style="secondary"}}
             </div>
@@ -69,7 +82,7 @@
                 {{> newsletter}}
             {{/inline}}
         {{/ukContainer}}
-    </div> --}}
+    </div>
 
 	{{/inline}}
 {{/main}}

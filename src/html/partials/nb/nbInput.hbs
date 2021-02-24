@@ -13,8 +13,8 @@
 		{{else}}
 		{{#if (eq type "submit")}}
 
-		<button id="nb-form-{{page.name}}_{{name}}" class="uk-button uk-button-{{default style "primary"}}" name="{{name}}" value="{{value}}" type="{{type}}">
-            {{> renderIcon name="arrow-right" class="icon-left"}}
+		<button id="nb-form-{{page.name}}_{{name}}" class="uk-button uk-button-{{default style "primary"}} alt" name="{{name}}" value="{{value}}" type="{{type}}">
+            {{> renderIcon name="arrow-right-solid" class="icon-left"}}
             {{value}}
         </button>
 

@@ -8,8 +8,7 @@
 
     form {
         border-radius: 20px;
-        background-color: $blue-light;
-        padding: 36px 85px 50px 53px;
+        padding: 36px 20px 53px;
     }
 
     +.nb-form {
@@ -74,5 +73,11 @@
 
     .g-recaptcha {
         margin-bottom: $global-gutter;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        form {
+            padding: 36px 85px 50px 53px;
+        }
     }
 }

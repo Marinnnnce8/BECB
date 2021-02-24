@@ -1,18 +1,18 @@
 <div class="members">
     {{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
 		{{#*inline "out"}}
-            <div class="members-inner uk-text-center uk-position-relative uk-overflow-hidden">
+            <div class="members-inner uk-text-center uk-position-relative uk-overflow-hidden uk-background-secondary">
                 <img src="./img/members-shape.svg" class="uk-position-bottom" data-uk-svg alt="shape">
 
                 {{#if title}}<h2 class="uk-margin-medium-bottom">{{title}}</h2>{{/if}}
-                {{#> ukGrid class="uk-grid-large uk-child-width-1-3"}}
+                {{#> ukGrid class="uk-grid-large uk-child-width-1-3@m"}}
                     {{#*inline "cells"}}
                         {{#each items}}
                             {{#with this}}
                                 <div>
                                     <div class="uk-card uk-flex uk-flex-column uk-flex-middle">
                                         <a class="uk-position-cover" href="{{href}}" aria-label="{{label}}"></a>
-                                        <div class="uk-card-media-top uk-position-relative uk-border-circle">
+                                        <div class="uk-card-media-top uk-overflow-hidden uk-position-relative uk-border-circle">
                                             <img class="uk-position-center uk-width-1-1" loading="lazy" width="{{width}}" height="{{height}}" src="./img/{{img}}" alt="{{alt}}">
                                             <img class="uk-position-center uk-position-z-index" loading="lazy" widthSec="{{widthSec}}" heightSec="{{heightSec}}" src="./img/{{imgSec}}" alt="{{altSec}}">
                                         </div>

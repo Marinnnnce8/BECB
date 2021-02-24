@@ -3,19 +3,6 @@
         padding-bottom: 80px;
         padding-top: 30px;
 
-        .uk-button-primary {
-            background-color: $global-color;
-            color: $white;
-
-            &::before {
-                background-color: $success;
-            }
-
-            svg {
-                color: $success;
-            }
-        }
-
         .uk-preserve {
             position: relative;
         }
@@ -23,6 +10,12 @@
 
     .newsletter-home .uk-container-small {
         max-width: 965px;
+    }
+
+    @media (min-width: $breakpoint-small) {
+        .newsletter-home {
+            margin-top: -250px;
+        }
     }
 
     @media (min-width: $breakpoint-medium) {
@@ -44,19 +37,23 @@
             }
 
             &-text {
-                max-width: 55%;
+                max-width: 48%;
             }
 
             h1 {
                 font-size: 44px;
                 line-height: 52.8px;
-                margin-bottom: 280px;
+                margin-bottom: 230px;
             }
         }
 
         h2 {
             font-size: 54px;
             line-height: 64.8px;
+        }
+
+        .newsletter-home {
+            margin-top: -180px;
         }
     }
 
@@ -69,12 +66,22 @@
             }
 
             &-text {
-                max-width: 620px;
+                max-width: 570px;
             }
 
             .uk-preserve {
                 top: 130px;
             }
+        }
+
+        .newsletter-home {
+            margin-top: 40px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large-m) {
+        .newsletter-home {
+            margin-top: 60px;
         }
     }
 
@@ -82,10 +89,18 @@
         .banner {
             padding-left: 190px;
 
+            &-text {
+                max-width: 620px;
+            }
+
             .uk-preserve {
                 top: 0;
                 left: -157px;
             }
+        }
+
+        .newsletter-home {
+            margin-top: -60px;
         }
     }
 
@@ -102,14 +117,28 @@
             overflow-x: hidden;
 
             .uk-preserve {
-                width: 120vw;
-                max-width: 150vw;
+                width: 85vw;
+                max-width: 85vw;
                 left: -5%;
             }
         }
     }
 
     @media (max-width: $breakpoint-xsmall-max) {
+        h2 {
+            font-size: 44px;
+            line-height: 48.4px;
+        }
+
+        .academia h2 {
+            font-size: 54px;
+            line-height: 59.4px;
+        }
+
+        .banner .uk-button {
+            max-width: 280px;
+            width: 100%;
+        }
 
         .banner-text,
         .banner-title {
@@ -124,11 +153,6 @@
             width: 225vw;
             max-width: 225vw;
             left: -97%;
-        }
-
-        .uk-button {
-            max-width: 280px;
-            width: 100%;
         }
     }
 }

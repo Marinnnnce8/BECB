@@ -46,7 +46,7 @@
     }
 
     .embeded-video {
-        min-height: 531px;
+        min-height: 380px;
         border-radius: 20px;
 
         .uk-preserve {
@@ -56,8 +56,8 @@
         }
 
         >a span {
-            width: 96px;
-            height: 96px;
+            width: 64px;
+            height: 64px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -66,10 +66,10 @@
         }
 
         .icon-play {
-            width: 36px;
-            height: 39px;
+            width: 20px;
+            height: 20px;
             color: $white;
-            left: 35px;
+            left: 24px;
             top: 50%;
             position: absolute;
             transform: translateY(-50%);
@@ -77,7 +77,6 @@
         }
 
         >div {
-            background-color: $blue-light;
             padding: 24px 20px 20px;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
@@ -100,6 +99,35 @@
 
             .icon-play {
                 color: $global-color;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-xsmall-max) {
+        .embeded-video {
+            min-height: 531px;
+
+            >a span {
+                width: 96px;
+                height: 96px;
+            }
+
+            .icon-play {
+                width: 36px;
+                height: 39px;
+                left: 35px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        .embeded-video {
+            >div span {
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 24px;
             }
         }
     }

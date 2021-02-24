@@ -1,5 +1,5 @@
 .footer {
-    padding-top: 90px;
+    padding-top: 70px;
 
     &-top {
         p {
@@ -64,81 +64,53 @@
         }
     }
 
-    .contact {
-        .uk-button {
-            &:first-child {
-                background-color: $global-color;
-                margin-right: 40px;
-                color: $white;
-
-                &::after {
-                    background-color: $success;
-                }
-
-                svg {
-                    color: $success;
-                }
-
-                @include hover {
-                    background-color: transparent;
-
-                    svg {
-                        color: $white;
-                    }
-                }
-            }
-        }
+    .contact .uk-button:first-child {
+        margin-right: 40px;
     }
 
     @media (max-width: $breakpoint-mobile) {
         font-size: 0.8rem;
     }
 
-    .legal {
+    .legal ul {
+        margin: 0;
+        padding: 0;
 
-        ul {
-            margin: 0;
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 20px 0 0;
             padding: 0;
 
-            li {
-                display: inline-block;
-                list-style: none;
-                margin: 0 20px 0 0;
-                padding: 0;
+            a {
+                color: $global-color;
 
-                a {
-                    color: $global-color;
-
-                    @include hover {
-                        color: $black;
-                    }
+                @include hover {
+                    color: $black;
                 }
+            }
 
-                @media (max-width: $breakpoint-mobile) {
-                    display: block;
-                }
+            @media (max-width: $breakpoint-mobile) {
+                display: block;
             }
         }
     }
 
-    .watermark {
+    .watermark a {
+        transition: $transition;
+        align-items: center;
+        color: $black;
+        display: inline-flex;
+        font-weight: 700;
 
-        a {
-            transition: $transition;
-            align-items: center;
-            color: $black;
-            display: inline-flex;
-            font-weight: 700;
+        @include hover {
+            color: #e11e2f;
+            text-decoration: none;
+        }
 
-            @include hover {
-                color: #e11e2f;
-                text-decoration: none;
-            }
-
-            img {
-                height: 1rem;
-                margin-left: 2px;
-            }
+        img {
+            height: 1rem;
+            margin-left: 2px;
         }
     }
 

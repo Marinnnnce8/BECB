@@ -2,14 +2,11 @@
     margin-bottom: 177px;
 
     &-inner {
-        background-color: $blue-light;
         border-radius: 60px;
-        padding: 15px 60px 78px;
+        padding: 15px 20px 78px;
     }
 
     .uk-card {
-        padding-left: 58px;
-        padding-right: 58px;
 
         >a {
             z-index: 2;
@@ -48,6 +45,20 @@
             left: 50%;
             transform: translateX(-50%);
             top: 12px;
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        &-inner {
+            border-radius: 40px;
+            padding: 15px 60px 78px;
+        }
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        .uk-card {
+            padding-left: 58px;
+            padding-right: 58px;
         }
     }
 }
