@@ -80,22 +80,41 @@ $animationDelay: 7;
                     &:not(:last-of-type) {
                         margin-right: 30px;
                     }
+
+                    @include hover {
+                        background-color: $global-color;
+
+                        svg {
+                            color: $white;
+                        }
+                    }
                 }
             }
 
-            .uk-button {
+            .uk-button-primary {
+                background-color: $success;
                 margin-top: 50px;
                 max-width: 280px;
                 margin-left: -10px;
+                color: $global-color;
 
                 svg {
                     width: 18px;
                     height: 18px;
+                    color: $global-color;
+                }
+
+                &::after {
+                    background-color: $global-color;
                 }
 
                 @include hover {
-                    background-color: $global-color;
+                    background-color: transparent;
                     color: $white;
+
+                    svg {
+                        color: $white;
+                    }
                 }
             }
         }

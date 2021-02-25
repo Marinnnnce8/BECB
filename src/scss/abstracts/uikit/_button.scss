@@ -33,6 +33,7 @@
     overflow: hidden;
     padding: 17px 20px 21px 27px;
     font-weight: $bold;
+    z-index: 1;
 
     &::after {
         position: absolute;

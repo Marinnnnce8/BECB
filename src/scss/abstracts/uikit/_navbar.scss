@@ -76,7 +76,7 @@
             &::before {
                 top: 0;
                 transition: .1s ease;
-                background: $secondary;
+                background: $global-color;
             }
 
             &::after {
