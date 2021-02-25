@@ -12,8 +12,12 @@
 			{{/with}}
 		{{/each}}
 		</ul>
-		<a href="#" data-uk-slidenav-previous aria-label="previous" data-uk-slideshow-item="previous" class="uk-border-circle uk-flex uk-flex-center"></a>
-		<a href="#" data-uk-slidenav-next aria-label="next" data-uk-slideshow-item="next" class="uk-border-circle uk-flex uk-flex-center"></a>
+		<a href="#" data-uk-slidenav-previous aria-label="previous" data-uk-slideshow-item="previous" class="uk-border-circle uk-flex uk-flex-center">
+            {{> renderIcon name="caret-left"}}
+        </a>
+		<a href="#" data-uk-slidenav-next aria-label="next" data-uk-slideshow-item="next" class="uk-border-circle uk-flex uk-flex-center">
+            {{> renderIcon name="caret-right"}}
+        </a>
 	</div>
     {{#if caption}}
         <div class="uk-text-center uk-margin-small-top">

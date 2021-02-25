@@ -1,0 +1,14 @@
+{
+    "template": {
+		"name": "business-profile"
+	},
+    "businessBanner": {
+        "backgroundImg": "business-banner.png",
+        "title": "Aquatera Ltd",
+        "src": "aquatera-logo.png",
+        "width": "148",
+        "height": "29",
+        "alt": "image",
+        "location": "Orkney, Scotland"
+    }
+}

@@ -1,0 +1,38 @@
+ {{#> main}}
+	{{#*inline "main"}}
+ 
+        {{> businessBanner}}
+
+    {{#> ukContainer size=(default size (default page.ukContainer ukContainer)) class="uk-margin-medium-bottom"}}
+        {{#*inline "out"}}
+            <p class="uk-text-lead">Operating globally from a hub in Orkney, off the north coast of Scotland, Aquatera provides environmental expertise and operational support for offshore, coastal and land-based activities. Our clients range from multinational corporations and national governments to individuals and community groups and we operate in more than 30 countries.</p>
+            <p>We take a multi-disciplinary approach to projects, supporting clients from planning right through to delivery and decommissioning. Our flexible business model, which draws on a wide network of associates and delivery partners, enables us to respond to clients’ needs whoever and wherever they are.</p>
+            <p>We are agents in delivering sustainable development. Whether we are helping developers to assess environmental impacts, to plan for and manage them; advising on cable, pipeline or shipping routes; or assisting communities to achieve energy security or to conserve their heritage, we deploy our skills and expertise to further our clients’ interests and the wider sustainable development goal.</p>
+            <p>We are committed to decarbonising energy generation and facilitating energy security. This commitment is manifested by our involvement in innovative hydrogen storage projects, our support for emerging technologies like wave and tidal power and through projects in countries as diverse and Chile, Japan and Kazakhstan, all tackling issues of energy security and the development of 21st Century energy infrastructure.</p>
+        {{/inline}}
+	{{/ukContainer}}
+
+    {{> gallery items=items.gallery size="large" class="uk-margin-medium-bottom"}}
+
+    <div class="uk-position-relative">
+        {{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
+            {{#*inline "out"}}
+                <div class="uk-position-relative uk-text-center member-newsletter">
+                    <h2>Become a Member</h2>
+                    <p class="uk-margin-medium-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis velit id vel pulvinar nisl integer adipiscing velit leo.</p>
+                    {{> ukButton pull="left" icon="member" label="Become a member" style="primary"}}
+                </div>
+            {{/inline}}
+        {{/ukContainer}}
+
+        {{> members items=items.members title="Other Members in this Sector" size="xlarge"}}
+
+        {{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
+            {{#*inline "out"}}
+                {{> newsletter}}
+            {{/inline}}
+        {{/ukContainer}}
+    </div>
+
+ 	{{/inline}}
+{{/main}}

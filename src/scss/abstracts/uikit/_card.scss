@@ -45,15 +45,34 @@
 @mixin hook-card-default {
     box-shadow: transparent;
 
+    .uk-link-reset,
+    .uk-card-media-top img,
+    .uk-button-secondary::after {
+        transition: $transition;
+    }
+
     .uk-card-media-top {
         width: 130px;
         height: 130px;
         margin-bottom: 10px;
+
+        @include hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
     }
 
     .uk-card-header,
     .uk-card-footer {
         padding: 0;
+    }
+
+    .uk-link-reset {
+
+        @include hover {
+            color: rgba($global-color, .7) !important;
+        }
     }
 
     .uk-card-body {
@@ -94,7 +113,6 @@
             background-color: $global-color;
             height: 100%;
             width: 64px;
-            transition: inherit;
             z-index: 0;
             border-radius: 50px;
         }
@@ -111,6 +129,12 @@
             top: 50%;
             transform: translateY(-50%);
             z-index: 1;
+        }
+
+        @include hover {
+            &::before {
+                transform: translate(40%, -50%);
+            }
         }
     }
 

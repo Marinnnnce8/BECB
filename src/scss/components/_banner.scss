@@ -13,6 +13,75 @@
         }
     }
 
+    &-business {
+        padding: 0 20px;
+
+        .banner-business-inner {
+            border-radius: 40px;
+            margin: 40px auto 50px;
+            max-width: 965px;
+
+            .banner-business-text {
+                padding: 20px;
+            }
+
+            .uk-background-cover {
+                min-height: 270px;
+                padding: 0 20px;
+            }
+
+            h1 {
+                color: $white;
+            }
+
+            li {
+                padding: 15px 0;
+                border-bottom: 1px solid rgba($global-color, .15);
+            }
+
+            a {
+                font-size: 16px;
+            }
+
+            .links a:not(:first-child) {
+                margin-left: 3px;
+            }
+
+            svg {
+                width: 24px;
+                height: 24px;
+                color: $global-color;
+            }
+
+            .banner-business-logo {
+                width: 196px;
+                margin: 0 auto;
+
+                >div {
+                    background-color: $white;
+                    margin-bottom: 30px;
+                    height: 196px;
+
+                    img {
+                        max-width: calc(100% - 20px);
+                    }
+                }
+            }
+
+            .banner-business-social a {
+                &::before {
+                    display: none;
+                }
+
+                @include hover {
+                    svg {
+                        color: rgba($global-color, .7);
+                    }
+                }
+            }
+        }
+    }
+
     .uk-overlay {
         padding: $global-margin 0;
 
@@ -22,7 +91,6 @@
     }
 
     @media (min-width: $breakpoint-small) {
-
         &::before {
             height: 75%;
         }
@@ -30,11 +98,35 @@
         .uk-overlay {
             padding-bottom: $global-medium-margin;
         }
+
+        &-business .banner-business-inner {
+            border-radius: 60px;
+
+            .banner-business-text {
+                padding: 30px 50px 50px 35px;
+            }
+
+            .uk-background-cover {
+                padding-left: 270px;
+            }
+
+            .banner-business-logo {
+                margin-top: -125px;
+                margin-right: 40px;
+                margin-left: 0;
+            }
+        }
     }
 
     @media (min-width: $breakpoint-large) {
         .uk-overlay {
             padding-bottom: $global-large-margin;
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        &-business .banner-business-text {
+            flex-direction: column;
         }
     }
 }

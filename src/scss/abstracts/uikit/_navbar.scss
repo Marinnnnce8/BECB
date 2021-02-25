@@ -1,3 +1,9 @@
+@mixin hook-navbar {
+    @media (max-width: $breakpoint-medium) {
+        align-items: center;
+    }
+}
+
 @mixin hook-navbar-nav-item {
     font-weight: $bold;
     min-height: 0;

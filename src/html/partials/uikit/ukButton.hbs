@@ -1,4 +1,4 @@
-<{{#if link}}a href="{{link}}"{{else}}button type="button"{{/if}} class="uk-button uk-button-{{default style "default"}}{{#if size}} uk-button-{{size}}{{/if}}{{#if class}} {{class}}{{/if}}">
+<{{#if link}}a{{#if target}} target="_blank" rel="noreferrer noopener"{{/if}} href="{{link}}"{{else}}button type="button"{{/if}} class="uk-button uk-button-{{default style "default"}}{{#if size}} uk-button-{{size}}{{/if}}{{#if class}} {{class}}{{/if}}">
 {{#if (eq pull "left")}}
 	{{#if icon}}
 		{{> renderIcon viewBox="19 17" name=icon class="icon-left"}}

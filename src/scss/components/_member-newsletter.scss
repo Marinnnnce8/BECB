@@ -1,0 +1,10 @@
+.member-newsletter {
+    padding: 60px 20px 70px;
+    margin-bottom: 55px;
+
+    @media (max-width: $breakpoint-small-max) {
+        .uk-button {
+            padding: 17px 17px 21px 20px;
+        }
+    }
+}

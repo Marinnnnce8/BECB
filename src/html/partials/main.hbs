@@ -65,13 +65,6 @@
 
         {{#if page.banner}}
         {{> banner}}
-        {{else}}
-        {{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
-        {{#*inline "out"}}
-        <h1>{{page.h1}}</h1>
-        {{> ukBreadcrumb}}
-        {{/inline}}
-        {{/ukContainer}}
         {{/if}}
 
         {{#> main}}{{/main}}

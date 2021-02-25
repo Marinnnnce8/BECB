@@ -1,0 +1,23 @@
+@mixin hook-breadcrumb-item {
+    &:not(span) {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: $global-color;
+            opacity: 0;
+            height: 1px;
+            content: '';
+            transition: $transition;
+        }
+    }
+}
+
+@mixin hook-breadcrumb-item-hover {
+    &::before {
+        opacity: 1;
+    }
+}

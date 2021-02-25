@@ -1,6 +1,10 @@
 .members {
     margin-bottom: 177px;
 
+    >img {
+        z-index: -1;
+    }
+
     &-inner {
         border-radius: 60px;
         padding: 15px 20px 78px;

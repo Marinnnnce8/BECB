@@ -75,7 +75,7 @@ $base-link-hover-text-decoration: underline;
 $base-strong-font-weight: $bold;
 $base-code-color: inherit;
 $base-em-color: inherit;
-$base-selection-background: $secondary;
+$base-selection-background: rgba($global-color, .7);
 $base-heading-font-family: $font-exo;
 $base-heading-color: $global-color;
 $base-h1-font-size-m: 54px;
@@ -88,7 +88,7 @@ $base-h4-line-height: 1;
 $base-h4-font-size: 26px;
 $base-h4-line-height: 1;
 $base-blockquote-font-style: normal;
-$base-blockquote-font-size: 20px;
+$base-blockquote-font-size: 34px;
 $base-blockquote-line-height: 1.6;
 
 //

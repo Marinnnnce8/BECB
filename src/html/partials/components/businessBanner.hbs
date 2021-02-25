@@ -1,0 +1,50 @@
+{{#if page.businessBanner}}
+<div class="banner-business">
+    <div class="banner-business-inner uk-overflow-hidden">
+        <div class="uk-background-cover uk-flex uk-flex-bottom" data-uk-img style="background-image: url('./img/{{page.businessBanner.backgroundImg}}');">
+            <h1>{{page.businessBanner.title}}</h1>
+        </div>
+        <div class="uk-flex uk-flex-between uk-background-secondary banner-business-text">
+            <div class="banner-business-logo">
+                <div class="uk-border-circle uk-position-relative">
+                    <img class="uk-position-center" src="./img/{{page.businessBanner.src}}" width="{{page.businessBanner.width}}" height="{{page.businessBanner.height}}" loading="lazy" alt="{{page.businessBanner.alt}}">
+                </div>
+                <span class="uk-flex uk-flex-column uk-flex-middle">
+                    {{>renderIcon name="pin" class="uk-margin-small-bottom"}}
+                    {{page.businessBanner.location}}
+                </span>
+            </div>
+            <div class="uk-width-expand">
+                <ul class="uk-list">
+                    <li class="uk-flex uk-flex-between uk-flex-middle uk-flex-wrap">
+                        <span class="uk-text-bold uk-flex uk-flex-middle uk-margin-small-right">
+                            {{>renderIcon class="uk-margin-right" name="folder"}} Sectors
+                        </span>
+                        <div class="uk-flex uk-flex-wrap links">
+                            {{> ukButton target=true link="#" label="Marine aquaculture," style="text"}}
+                            {{> ukButton target=true link="#" label="Marine fisheries," style="text"}}
+                            {{> ukButton target=true link="#" label="Offshore renewable energy" style="text"}}
+                        </div>
+                    </li>
+                    <li class="uk-flex uk-flex-between uk-flex-middle uk-margin-remove-top uk-flex-wrap">
+                        <span class="uk-text-bold uk-flex uk-flex-middle uk-margin-small-right">
+                            {{>renderIcon class="uk-margin-right" name="website"}} Website
+                        </span>
+                        {{> ukButton target=true link="#" label="www.aquatera.co.uk" style="text"}}
+                    </li>
+                    <li class="uk-flex uk-flex-between uk-flex-wrap uk-flex-middle uk-margin-remove-top">
+                        <span class="uk-text-bold uk-flex uk-flex-middle uk-margin-small-right">
+                            {{>renderIcon class="uk-margin-right" name="social"}} Social media
+                        </span>
+                        <div class="uk-flex uk-flex-wrap banner-business-social">
+                            {{> ukButton target=true icon="facebook" link="#" aria-label="Visit our Facebook page" style="text"}}
+                            {{> ukButton target=true icon="twitter" link="#" aria-label="Visit our Twitter page" style="text"}}
+                            {{> ukButton target=true icon="linkedin" link="#" aria-label="Visit our Linkedin page" style="text"}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

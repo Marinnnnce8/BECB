@@ -60,6 +60,7 @@
     @media (min-width: $breakpoint-large) {
         .banner {
             min-height: 1293px;
+            padding-top: 100px;
 
             &-title {
                 max-width: 800px;
@@ -83,11 +84,20 @@
         .newsletter-home {
             margin-top: 60px;
         }
+
+        .banner {
+            padding-top: 150px;
+
+            h1 {
+                margin-bottom: 255px;
+            }
+        }
     }
 
     @media (min-width: $breakpoint-xlarge) {
         .banner {
             padding-left: 190px;
+            padding-top: 75px;
 
             &-text {
                 max-width: 620px;

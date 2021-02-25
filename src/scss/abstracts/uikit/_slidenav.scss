@@ -6,6 +6,10 @@
 
     svg {
         color: $global-color;
+
+        &:last-child {
+            display: none;
+        }
     }
 
     @include hover {

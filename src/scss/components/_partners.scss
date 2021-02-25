@@ -51,6 +51,25 @@
         }
     }
 
+    blockquote {
+        padding-left: 0;
+        font-size: 20px;
+        margin-bottom: 50px;
+        position: relative;
+        color: $global-color;
+        font-family: $font-georgia;
+        border-left: 0;
+
+        svg {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            z-index: -1;
+            left: -15px;
+            top: -50px;
+        }
+    }
+
     &-buttons {
         >div:first-child {
             margin-bottom: 30px;
@@ -79,6 +98,11 @@
                 max-width: 40%;
                 top: 100%;
             }
+        }
+
+        blockquote svg {
+            left: -45px;
+            top: -25px;
         }
     }
 
@@ -111,16 +135,23 @@
             }
         }
 
-        blockquote {
-            margin-bottom: 50px;
+        blockquote svg {
+            width: 130px;
+            height: 107px;
+            left: -80px;
+            top: -37px;
         }
     }
 
     @media (min-width: $breakpoint-large) {
-        margin-top: 350px;
+        margin-top: 270px;
 
         h2 {
             margin-bottom: 60px;
+        }
+
+        blockquote {
+            padding-right: 40px;
         }
 
         &-text {

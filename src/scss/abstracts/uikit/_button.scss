@@ -72,9 +72,10 @@
 
         @include hover {
             background-color: transparent;
+            color: $global-color;
 
             svg {
-                color: $white;
+                color: $global-color;
             }
         }
     }
