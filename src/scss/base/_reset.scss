@@ -15,6 +15,10 @@ html,
 body {
     overflow-x: hidden;
 
+    p>a {
+        color: $azure;
+    }
+
     @media (max-width: $breakpoint-small) {
         p {
             font-size: 16px;

@@ -55,9 +55,9 @@
         </div>
     </div>
 
-	{{#> ukSection size="xlarge"}}
+	{{#> ukSection heading="Latest News" class="latest-news" size="xlarge"}}
 		{{#*inline "out"}}
-        <div class="uk-position-relative latest-news uk-overflow-hidden uk-background-secondary">
+        <div class="uk-position-relative latest-news-inner uk-overflow-hidden uk-background-secondary">
             <img src="./img/latest-news-shape.svg" class="uk-preserve uk-position-bottom" data-uk-svg alt="latest news shape">
             {{> nbJson id="posts" data=items.posts}}
         </div>

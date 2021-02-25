@@ -1,6 +1,19 @@
 .latest-news {
-    border-radius: 40px;
-    padding: 25px 20px 90px;
+    h2 {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    &-inner {
+        border-radius: 40px;
+        padding: 25px 20px 90px;
+    }
 
     .uk-card-header,
     .uk-card-footer {
@@ -14,12 +27,16 @@
     }
 
     @media (min-width: $breakpoint-medium) {
-        border-radius: 60px;
-        padding: 100px 40px 130px;
+        &-inner {
+            border-radius: 60px;
+            padding: 100px 40px 130px;
+        }
     }
 
     @media (min-width: $breakpoint-large-m) {
-        padding: 100px 60px 130px;
+        &-inner {
+            padding: 100px 60px 130px;
+        }
 
         .uk-grid>* {
             padding-left: 55px;
@@ -27,8 +44,10 @@
     }
 
     @media (max-width: $breakpoint-small) {
-        >.uk-preserve {
-            bottom: 25px;
+        &-inner {
+            >.uk-preserve {
+                bottom: 25px;
+            }
         }
     }
 }

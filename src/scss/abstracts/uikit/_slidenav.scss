@@ -6,6 +6,11 @@
 
     svg {
         color: $global-color;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
 
         &:last-child {
             display: none;
@@ -27,11 +32,8 @@
 
     @media (min-width: $breakpoint-small-max) {
         svg {
-            width: 16px;
-            height: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            position: absolute;
+            width: 20px;
+            height: 20px;
         }
     }
 }

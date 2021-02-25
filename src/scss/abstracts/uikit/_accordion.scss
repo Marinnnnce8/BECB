@@ -20,6 +20,8 @@
 }
 
 @mixin hook-accordion-title {
+    font-family: $font-exo;
+    color: $global-color;
     font-weight: $bold;
     position: relative;
 
