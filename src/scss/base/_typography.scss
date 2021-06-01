@@ -1,0 +1,9 @@
+p {
+    >a {
+        color: $azure;
+    }
+
+    @media (max-width: $breakpoint-small) {
+        font-size: 16px;
+    }
+}
